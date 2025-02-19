@@ -4,8 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import Logo from "../../assets/img/white-synergy3.png";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Menu, X } from "lucide-react"; // Icons for mobile menu toggle
-
+import { Menu, X } from "lucide-react"; 
+import Button from "./button";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -94,12 +94,7 @@ export default function NavBar() {
           <a href="/login" className="block text-lg text-gray-800 hover:text-blue-600">
             Log In
           </a>
-          <a
-            href="/get-started"
-            className="block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium text-lg text-center"
-          >
-            Get Started
-          </a>
+          <Button></Button>
         </div>
       )}
     </header>
