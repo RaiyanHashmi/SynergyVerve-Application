@@ -1,15 +1,15 @@
-import { Geist, Geist_Mono } from "next/font/google";
+
 import NavBar from "../components/navbar";
-import Hero from "../components/hero";
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+import Hero  from "../components/hero";
+import { Inter } from 'next/font/google';
+
+const inter = Inter({
+  subsets: ['latin'], 
+  variable: '--font-inter',
+  weight: ['400', '700'], 
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+
 
 export default function Home() {
   return (
@@ -20,4 +20,3 @@ export default function Home() {
   </>
   );
 }
-//index.ts

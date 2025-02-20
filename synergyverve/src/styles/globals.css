@@ -8,8 +8,37 @@
   --secondary: #dddbff;
   --accent: #443dff;
 }
+.col_text{
+  color: var(--text);
+}
+.col_background{
+  color: var(--background);
+}.col_primary{
+  color: var(--primary);
+}.col_secondary{
+  color: var(--secondary);
+}
+.col_accent{
+  color: var(--accent);
+}
+.bg_text{
+  background-color: var(--text);
+}
+.bg_Background{
+  background-color: var(--background);
+}
+.bg_Primary{
+  background-color: var(--primary);
+}
+.bg_secondary{
+  background-color: var(--secondary);
+}
+.bg_accent{
+  background-color: var(--accent);
+}
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, sans-serif;
   color: var(--text);
   background-color: var(--background);
+
 }
