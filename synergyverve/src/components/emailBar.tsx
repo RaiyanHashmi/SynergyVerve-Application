@@ -1,4 +1,8 @@
+// 
 
+
+
+// EmailBar.tsx
 "use client";
 
 import React, { useState } from 'react';
@@ -11,13 +15,13 @@ interface EmailBarProps {
     onSubmit?: (email: string) => void;
 }
 
-interface NavButtonProps {
+interface ButtonProps {
     text: string;
     className?: string;
     type?: "button" | "submit" | "reset";
 }
 
-const Button: React.FC<NavButtonProps> = ({ 
+const Button: React.FC<ButtonProps> = ({ 
     text = "Submit", 
     className = "",
     type = "submit"
@@ -42,15 +46,12 @@ const EmailBar: React.FC<EmailBarProps> = ({
 }) => {
     const [email, setEmail] = useState('');
 
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setEmail(event.target.value);
-    };
-
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        console.log('Email submitted:', email);
-        onSubmit?.(email);
-        setEmail(''); // Clear the input after submission
+        if (onSubmit) {
+            onSubmit(email);
+        }
+        setEmail('');
     };
 
     return (
@@ -61,7 +62,7 @@ const EmailBar: React.FC<EmailBarProps> = ({
             <input
                 type="email"
                 value={email}
-                onChange={handleChange}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder={placeholder}
                 required
                 className="flex-1 px-4 py-2 border-none outline-none bg-text text-secondary"

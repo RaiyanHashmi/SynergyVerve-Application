@@ -6,7 +6,7 @@ import HeroBG from "../../assets/img/Group 2.png";
 import EmailBar from "./emailBar";
 import '@/styles/globals.css';
 
-const Hero: React.FC = () => {
+const OurPartners: React.FC = () => {
   return (
     <>
       <Head>
@@ -70,4 +70,4 @@ const Hero: React.FC = () => {
   );
 };
 
-export default Hero;
+export default OurPartners;
