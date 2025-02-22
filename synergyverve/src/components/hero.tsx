@@ -4,6 +4,7 @@ import Image from "next/image";
 import HeroImage from "../../assets/img/Mask group.png";
 import HeroBG from "../../assets/img/Group 2.png";
 import EmailBar from "./emailBar";
+import '@/styles/globals.css';
 
 const Hero: React.FC = () => {
   return (
@@ -39,7 +40,7 @@ const Hero: React.FC = () => {
             </h2>
             <h1 className=" md:text-7xl  mt-2 font-inter font-extrabold">
               Accelerate Your Revenue with{" "}
-              <span className="from-primary to-accent bg-clip-text text-transparent bg-gradient-to-r">
+              <span className="from-primary to-accent bg-clip-text text-transparent bg-gradient-to-r col_text">
                 Synergy Verve
               </span>
             </h1>
