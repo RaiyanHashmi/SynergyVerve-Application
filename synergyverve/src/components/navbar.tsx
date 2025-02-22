@@ -7,6 +7,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Button from "./button";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -156,7 +157,8 @@ export default function NavBar() {
           >
             Log In
           </a>
-          <Button></Button>
+          
+         <Button/>
         </div>
       )}
     </header>

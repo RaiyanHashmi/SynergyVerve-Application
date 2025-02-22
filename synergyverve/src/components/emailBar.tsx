@@ -19,7 +19,7 @@ const EmailBar: React.FC<EmailBarProps> = ({ className }) => {
     return (
         <form
             onSubmit={handleSubmit}
-            className={`flex items-center bg-text text-secondary   z-10 rounded-lg overflow-hidden w-full max-w-md ${className}`}
+            className={`flex items-center bg-text text-secondary   z-10 rounded-3xl overflow-hidden w-full max-w-md ${className}`}
         >
             <input
                 type="email"
