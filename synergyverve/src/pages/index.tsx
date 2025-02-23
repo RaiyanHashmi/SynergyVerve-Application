@@ -80,9 +80,9 @@ export default function Home() {
   return (
     <>
       <NavBar />
-
+<Hero/>
       <HeroParallax products={products} />
-      <Hero />
+      
       <AboutSec />
    
     </>
