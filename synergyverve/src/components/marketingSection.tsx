@@ -9,9 +9,9 @@ const MarketingSection = () => {
           Our Marketing Agency Provides:
         </h2>
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Feature Card 1 */}
+ 
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-teal-500/20">
-            <div className="text-4xl text-teal-400 mb-4"><img src={"img"} alt="" /></div>
+          
             <h3 className="text-xl font-semibold text-teal-400 mb-2">
               Actionable Insights at Your Fingertips
             </h3>
@@ -20,9 +20,9 @@ const MarketingSection = () => {
             </p>
           </div>
 
-          {/* Feature Card 2 */}
+      
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-teal-500/20">
-            <div className="text-4xl text-teal-400 mb-4">💡</div>
+            
             <h3 className="text-xl font-semibold text-teal-400 mb-2">
               Valuable Content that Generates Revenue
             </h3>
@@ -31,9 +31,9 @@ const MarketingSection = () => {
             </p>
           </div>
 
-          {/* Feature Card 3 */}
+         
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-teal-500/20">
-            <div className="text-4xl text-teal-400 mb-4">⏱️</div>
+           
             <h3 className="text-xl font-semibold text-teal-400 mb-2">
               Performance Tracking in Real Time
             </h3>
@@ -42,9 +42,9 @@ const MarketingSection = () => {
             </p>
           </div>
 
-          {/* Feature Card 4 */}
+         
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-teal-500/20">
-            <div className="text-4xl text-teal-400 mb-4">🚀</div>
+            
             <h3 className="text-xl font-semibold text-teal-400 mb-2">
               Successful Content Marketing Strategies
             </h3>
