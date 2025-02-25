@@ -1,8 +1,9 @@
 import React from 'react';
 import img from '../Group 2.png';
 
-const MarketingSection = () => {
+const marketingSection = () => {
   return (
+    
     <div className="bg-gradient-to-br from-gray-900  to-gray-800 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-500 uppercase tracking-wide">
@@ -58,4 +59,4 @@ const MarketingSection = () => {
   );
 };
 
-export default MarketingSection;
+export default marketingSection;
