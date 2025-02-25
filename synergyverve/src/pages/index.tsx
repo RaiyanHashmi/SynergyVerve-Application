@@ -1,7 +1,9 @@
 import NavBar from "../components/navbar";
 import Hero from "../components/hero";
 import AboutSec from "../components/AboutCompanySection";
-import MarketingSec from "../components/marketingSection";
+import MarketingSection from "../components/MarketingSection";
+import OurPartners from "@/components/ourPartners";
+
 import { Inter } from "next/font/google";
 import { HeroParallax } from "../components/ui/HeroParallax";
 
@@ -87,7 +89,8 @@ export default function Home() {
       <AboutSec />
       <HeroParallax products={products} />
 
-      <MarketingSec/>
+      <MarketingSection/>
+      <ourPartners/>
      
    
     </>
