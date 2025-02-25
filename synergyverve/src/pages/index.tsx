@@ -1,8 +1,10 @@
 import NavBar from "../components/navbar";
 import Hero from "../components/hero";
 import AboutSec from "../components/AboutCompanySection";
+import MarketingSec from "../components/marketingSection";
 import { Inter } from "next/font/google";
 import { HeroParallax } from "../components/ui/HeroParallax";
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -81,9 +83,12 @@ export default function Home() {
     <>
       <NavBar />
 <Hero/>
-      <HeroParallax products={products} />
       
       <AboutSec />
+      <HeroParallax products={products} />
+
+      <MarketingSec/>
+     
    
     </>
   );
