@@ -2,6 +2,7 @@ import NavBar from "../components/navbar";
 import Hero from "../components/hero";
 import AboutSec from "../components/AboutCompanySection";
 // import MarketingSection from "../components/marketingSection";
+import { Testimonial } from "../components/ui/animated-testimonials";
 import OurPartners from "@/components/ourPartners";
 import RevenueDrive from "../components/RevenueDrive";
 import { Inter } from "next/font/google";
@@ -79,7 +80,12 @@ const products = [
   },
   // Add more products as needed
 ];
-
+const Testimonial = {
+  quote:"lorem Ipsum",
+  name: "raiyan hashmine",
+  designation: "string main value for",
+  src: "/one.jpg"
+};
 export default function Home() {
   return (
     <>
@@ -92,6 +98,7 @@ export default function Home() {
       {/* <MarketingSection/> */}
       <OurPartners/>
       <RevenueDrive/>
+      <Testimonial testimonal={testimonal}/>
      
    
     </>
