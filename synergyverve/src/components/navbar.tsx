@@ -19,68 +19,52 @@ const geistMono = Geist_Mono({
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(null);
 
   return (
     <header>
       <div className="bg-primary col-text text-sm py-2 px-4 md:px-8 text-center">
         NEWS: Simplify your group’s finances with a platform →
       </div>
-      <nav className="flex items-center justify-between px-4 md:px-8 py-4 bg-text shadow-md">
-        <div className="flex items-center space-x-4">
-          <Image src={Logo} alt="Logo" width={250} height={250} />
+      <nav className="flex items-center justify-between px-6 md:px-12 py-5 bg-text shadow-lg">
+        <div className="flex items-center space-x-6">
+          <Image src={Logo} alt="Logo" width={200} height={200} />
         </div>
-        <ul className="hidden md:flex space-x-6 relative">
-          <li
-            className="relative"
-            onMouseEnter={() => setDropdownOpen(true)}
-            onMouseLeave={() => setDropdownOpen(false)}
-          >
-            <a
-              href="#"
-              className="text-lg font-medium text-white hover:text-blue-600 flex items-center space-x-1"
+        <ul className="hidden md:flex space-x-8 relative">
+          {[ 
+            { name: "Data Engineering", link: "/data-engineering", sub: ["Data Pipeline Development", "Cloud Data Solutions", "Data Warehousing & Lakes", "ETL/ELT & Real-Time Streaming", "Data Migration", "Data Governance"] },
+            { name: "Advanced Analytics & BI", link: "/analytics-bi", sub: ["Business Intelligence", "Predictive & Statistical Modeling", "Customer Insights", "Anomaly Detection", "Big Data Analytics"] },
+            { name: "AI & Machine Learning", link: "/ai-ml", sub: ["Custom AI/ML Development", "Industry-Specific AI", "MLOps & Deployment", "AI Chatbots & Virtual Assistants", "Ethical AI"] },
+            { name: "Software Development", link: "/software-development", sub: ["API Development", "Web Development", "Mobile Apps", "CMS & E-Commerce"] },
+            { name: "Cloud & DevOps", link: "/cloud-devops", sub: ["Cloud Infrastructure", "DevOps Automation", "Serverless Solutions", "Infrastructure as Code"] },
+            { name: "IoT Development", link: "/iot", sub: ["IoT Data Processing", "Edge AI", "Quantum ML"] },
+            { name: "E-Commerce & CRM", link: "/ecommerce-crm", sub: ["Platform Development", "CRM Integration", "Payment Gateways"] },
+            { name: "Cybersecurity", link: "/cybersecurity", sub: ["Data Encryption", "Access Controls", "Compliance Audits"] },
+            { name: "Consulting & Strategy", link: "/consulting-strategy", sub: ["Data Monetization", "Digital Transformation Roadmaps", "Training & Workshops"] }
+          ].map((item, index) => (
+            <li
+              key={index}
+              className="relative group"
             >
-              <span>Services</span>
-              <ChevronDown size={16} />
-            </a>
-            {dropdownOpen && (
-              <div className="absolute left-0 mt-2 bg-white text-black shadow-lg rounded-lg w-64">
-                <a href="/data-engineering" className="block px-4 py-2 hover:bg-gray-200">
-                  Data Engineering
-                </a>
-                <a href="/analytics-bi" className="block px-4 py-2 hover:bg-gray-200">
-                  Advanced Analytics & BI
-                </a>
-                <a href="/ai-ml" className="block px-4 py-2 hover:bg-gray-200">
-                  AI & Machine Learning
-                </a>
-                <a href="/software-development" className="block px-4 py-2 hover:bg-gray-200">
-                  Software Development
-                </a>
-                <a href="/cloud-devops" className="block px-4 py-2 hover:bg-gray-200">
-                  Cloud & DevOps
-                </a>
-                <a href="/iot" className="block px-4 py-2 hover:bg-gray-200">
-                  IoT Development
-                </a>
-                <a href="/ecommerce-crm" className="block px-4 py-2 hover:bg-gray-200">
-                  E-Commerce & CRM
-                </a>
-                <a href="/cybersecurity" className="block px-4 py-2 hover:bg-gray-200">
-                  Cybersecurity
-                </a>
-                <a href="/consulting-strategy" className="block px-4 py-2 hover:bg-gray-200">
-                  Consulting & Strategy
-                </a>
+              <a href={item.link} className="text-lg font-medium text-white hover:text-primary transition flex items-center space-x-1">
+                <span>{item.name}</span>
+                <ChevronDown size={16} />
+              </a>
+              <div className="absolute left-0 mt-2 bg-white text-black shadow-xl rounded-lg w-64 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                {item.sub.map((subItem, subIndex) => (
+                  <a key={subIndex} href={`${item.link}#${subItem.toLowerCase().replace(/ /g, "-")}`} className="block px-4 py-3 hover:bg-gray-200">
+                    {subItem}
+                  </a>
+                ))}
               </div>
-            )}
-          </li>
+            </li>
+          ))}
         </ul>
-        <div className="hidden md:flex items-center space-x-4">
-          <a href="/login" className="text-lg font-medium text-white hover:text-blue-600">
+        <div className="hidden md:flex items-center space-x-5">
+          <a href="/login" className="text-lg font-medium text-white hover:text-primary transition">
             Log In
           </a>
-          <a href="/get-started" className="px-4 py-2 bg-primary text-text rounded-lg hover:bg-blue-700 font-medium text-lg">
+          <a href="/get-started" className="px-5 py-3 bg-primary text-text rounded-xl shadow-md hover:bg-blue-700 transition font-medium text-lg">
             Get Started
           </a>
         </div>
@@ -91,42 +75,6 @@ export default function NavBar() {
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </nav>
-      {isOpen && (
-        <div className="md:hidden bg-text shadow-md absolute left-0 w-full p-4 space-y-4">
-          <a href="/data-engineering" className="block text-lg text-white hover:text-blue-600">
-            Data Engineering
-          </a>
-          <a href="/analytics-bi" className="block text-lg text-white hover:text-blue-600">
-            Advanced Analytics & BI
-          </a>
-          <a href="/ai-ml" className="block text-lg text-white hover:text-blue-600">
-            AI & Machine Learning
-          </a>
-          <a href="/software-development" className="block text-lg text-white hover:text-blue-600">
-            Software Development
-          </a>
-          <a href="/cloud-devops" className="block text-lg text-white hover:text-blue-600">
-            Cloud & DevOps
-          </a>
-          <a href="/iot" className="block text-lg text-white hover:text-blue-600">
-            IoT Development
-          </a>
-          <a href="/ecommerce-crm" className="block text-lg text-white hover:text-blue-600">
-            E-Commerce & CRM
-          </a>
-          <a href="/cybersecurity" className="block text-lg text-white hover:text-blue-600">
-            Cybersecurity
-          </a>
-          <a href="/consulting-strategy" className="block text-lg text-white hover:text-blue-600">
-            Consulting & Strategy
-          </a>
-          <hr />
-          <a href="/login" className="block text-lg text-white hover:text-blue-600">
-            Log In
-          </a>
-          <Button text="Get Started" />
-        </div>
-      )}
     </header>
   );
 }
