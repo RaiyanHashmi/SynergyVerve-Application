@@ -40,76 +40,47 @@ export default function NavBar() {
               href="#"
               className="text-lg font-medium text-white hover:text-blue-600 flex items-center space-x-1"
             >
-              <span>Features</span>
+              <span>Services</span>
               <ChevronDown size={16} />
             </a>
             {dropdownOpen && (
-              <div className="absolute left-0 mt-2 bg-white text-black shadow-lg rounded-lg w-48">
-                <a
-                  href="/feature1"
-                  className="block px-4 py-2 hover:bg-gray-200"
-                >
-                  Feature 1
+              <div className="absolute left-0 mt-2 bg-white text-black shadow-lg rounded-lg w-64">
+                <a href="/data-engineering" className="block px-4 py-2 hover:bg-gray-200">
+                  Data Engineering
                 </a>
-                <a
-                  href="/feature2"
-                  className="block px-4 py-2 hover:bg-gray-200"
-                >
-                  Feature 2
+                <a href="/analytics-bi" className="block px-4 py-2 hover:bg-gray-200">
+                  Advanced Analytics & BI
                 </a>
-                <a
-                  href="/feature3"
-                  className="block px-4 py-2 hover:bg-gray-200"
-                >
-                  Feature 3
+                <a href="/ai-ml" className="block px-4 py-2 hover:bg-gray-200">
+                  AI & Machine Learning
+                </a>
+                <a href="/software-development" className="block px-4 py-2 hover:bg-gray-200">
+                  Software Development
+                </a>
+                <a href="/cloud-devops" className="block px-4 py-2 hover:bg-gray-200">
+                  Cloud & DevOps
+                </a>
+                <a href="/iot" className="block px-4 py-2 hover:bg-gray-200">
+                  IoT Development
+                </a>
+                <a href="/ecommerce-crm" className="block px-4 py-2 hover:bg-gray-200">
+                  E-Commerce & CRM
+                </a>
+                <a href="/cybersecurity" className="block px-4 py-2 hover:bg-gray-200">
+                  Cybersecurity
+                </a>
+                <a href="/consulting-strategy" className="block px-4 py-2 hover:bg-gray-200">
+                  Consulting & Strategy
                 </a>
               </div>
             )}
           </li>
-          <li>
-            <a
-              href="/use-cases"
-              className="text-lg font-medium text-white hover:text-blue-600"
-            >
-              Use Cases
-            </a>
-          </li>
-          <li>
-            <a
-              href="/prices"
-              className="text-lg font-medium text-white hover:text-blue-600"
-            >
-              Prices
-            </a>
-          </li>
-          <li>
-            <a
-              href="/customers"
-              className="text-lg font-medium text-white hover:text-blue-600"
-            >
-              Customers
-            </a>
-          </li>
-          <li>
-            <a
-              href="/about"
-              className="text-lg font-medium text-white hover:text-blue-600"
-            >
-              About
-            </a>
-          </li>
         </ul>
         <div className="hidden md:flex items-center space-x-4">
-          <a
-            href="/login"
-            className="text-lg font-medium text-white hover:text-blue-600"
-          >
+          <a href="/login" className="text-lg font-medium text-white hover:text-blue-600">
             Log In
           </a>
-          <a
-            href="/get-started"
-            className="px-4 py-2 bg-primary text-text rounded-lg hover:bg-blue-700 font-medium text-lg"
-          >
+          <a href="/get-started" className="px-4 py-2 bg-primary text-text rounded-lg hover:bg-blue-700 font-medium text-lg">
             Get Started
           </a>
         </div>
@@ -122,41 +93,38 @@ export default function NavBar() {
       </nav>
       {isOpen && (
         <div className="md:hidden bg-text shadow-md absolute left-0 w-full p-4 space-y-4">
-          <a href="/" className="block text-lg text-white hover:text-blue-600">
-            Features
+          <a href="/data-engineering" className="block text-lg text-white hover:text-blue-600">
+            Data Engineering
           </a>
-          <a
-            href="/use-cases"
-            className="block text-lg text-white hover:text-blue-600"
-          >
-            Use Cases
+          <a href="/analytics-bi" className="block text-lg text-white hover:text-blue-600">
+            Advanced Analytics & BI
           </a>
-          <a
-            href="/prices"
-            className="block text-lg text-white hover:text-blue-600"
-          >
-            Prices
+          <a href="/ai-ml" className="block text-lg text-white hover:text-blue-600">
+            AI & Machine Learning
           </a>
-          <a
-            href="/customers"
-            className="block text-lg text-white hover:text-blue-600"
-          >
-            Customers
+          <a href="/software-development" className="block text-lg text-white hover:text-blue-600">
+            Software Development
           </a>
-          <a
-            href="/about"
-            className="block text-lg text-white hover:text-blue-600"
-          >
-            About
+          <a href="/cloud-devops" className="block text-lg text-white hover:text-blue-600">
+            Cloud & DevOps
+          </a>
+          <a href="/iot" className="block text-lg text-white hover:text-blue-600">
+            IoT Development
+          </a>
+          <a href="/ecommerce-crm" className="block text-lg text-white hover:text-blue-600">
+            E-Commerce & CRM
+          </a>
+          <a href="/cybersecurity" className="block text-lg text-white hover:text-blue-600">
+            Cybersecurity
+          </a>
+          <a href="/consulting-strategy" className="block text-lg text-white hover:text-blue-600">
+            Consulting & Strategy
           </a>
           <hr />
-          <a
-            href="/login"
-            className="block text-lg text-white hover:text-blue-600"
-          >
+          <a href="/login" className="block text-lg text-white hover:text-blue-600">
             Log In
           </a>
-          <Button text="Get Started"/>
+          <Button text="Get Started" />
         </div>
       )}
     </header>
