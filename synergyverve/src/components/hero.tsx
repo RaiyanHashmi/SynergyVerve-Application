@@ -5,6 +5,7 @@ import HeroImage from "../../assets/img/Mask group.png";
 import HeroBG from "../../assets/img/Group 2.png";
 import EmailBar from "./emailBar";
 import '@/styles/globals.css';
+import { Boxes } from "./ui/background-boxes";
 
 const Hero: React.FC = () => {
   return (
@@ -21,7 +22,7 @@ const Hero: React.FC = () => {
         />
       </Head>
 
-      <section className="relative bg-cover bg-no-repeat bg-center min-h-screen flex items-center justify-center px-8">
+      {/* <section className="relative bg-cover bg-no-repeat bg-center min-h-screen flex items-center justify-center px-8">
         <Image
           alt="Synergy Verve Hero Background"
           src={HeroBG}
@@ -65,6 +66,9 @@ const Hero: React.FC = () => {
             />
           </div>
         </div>
+      </section> */}
+      <section>
+        <Boxes/>
       </section>
     </>
   );
