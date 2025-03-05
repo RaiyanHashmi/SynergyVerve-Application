@@ -1,13 +1,10 @@
 import NavBar from "../components/navbar";
 import Hero from "../components/hero";
 import AboutSec from "../components/AboutCompanySection";
-// import MarketingSection from "../components/marketingSection";
-// import { Testimonial1 } from "../components/ui/animated-testimonials";
-import OurPartners from "@/components/ourPartners";
-import RevenueDrive from "../components/RevenueDrive";
+import { RevenueDrive } from "../components/RevenueDrive";
 import { Inter } from "next/font/google";
 import { HeroParallax } from "../components/ui/HeroParallax";
-
+import {GlobeDemo} from "../components/GlobeDemo";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -88,14 +85,10 @@ export default function Home() {
 <Hero/>
       
       <AboutSec />   
-      {/* dubara push  */}
       <HeroParallax products={products} />
-
-      {/* <MarketingSection/> */}
-      <OurPartners/>
+      
       <RevenueDrive/>
-      {/* <Testimonial1 testimonials={testimonial}/> */}
-     
+<GlobeDemo/>
    
     </>
   );
