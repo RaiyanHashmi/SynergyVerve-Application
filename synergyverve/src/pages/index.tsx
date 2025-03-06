@@ -1,10 +1,29 @@
 import NavBar from "../components/navbar";
 import Hero from "../components/hero";
 import AboutSec from "../components/AboutCompanySection";
+// import MarketingSection from "../components/marketingSection";
+// import Testimonial from "../components/ui/animated-testimonials";
+// import OurPartners from "@/components/ourPartners";
 import { RevenueDrive } from "../components/RevenueDrive";
+import {CareersSection} from "../components/CareersSection";
 import { Inter } from "next/font/google";
 import { HeroParallax } from "../components/ui/HeroParallax";
-import {GlobeDemo} from "../components/GlobeDemo";
+import MarketingSection from "@/components/MarketingSection";
+
+
+const testimonials = [
+  {
+    name: "John Doe",
+    feedback: "Great service!",
+    avatar: "/john.jpg",
+  },
+  {
+    name: "Jane Smith",
+    feedback: "Highly recommend!",
+    avatar: "/jane.jpg",
+  },
+  // Add more testimonials as needed
+];
 
 const inter = Inter({
   subsets: ["latin"],
@@ -77,19 +96,22 @@ const products = [
   },
   // Add more products as needed
 ];
-
+      // <Testimonial testimonials={testimonials} />
 export default function Home() {
   return (
     <>
       <NavBar />
-<Hero/>
-      
-      <AboutSec />   
+      <Hero />
+      <RevenueDrive />
+      <AboutSec />
+
       <HeroParallax products={products} />
-      
-      <RevenueDrive/>
-<GlobeDemo/>
+
+      <MarketingSection />
+      {/* <OurPartners /> */}
+      <CareersSection/>
    
+      {/* <Testimonial testimonials={testimonial} /> */}
     </>
   );
 }

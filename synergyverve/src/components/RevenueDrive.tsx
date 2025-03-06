@@ -1,154 +1,96 @@
 "use client";
 import React from "react";
-
-import { AnimatePresence, motion } from "framer-motion";
-import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
+import { Meteors } from "./ui/meteors";
 
 export function RevenueDrive() {
+  const cardData = [
+    {
+      title: "Bring More Visitors to Your Website",
+      description: [
+        "SEO that gets you noticed online",
+        "Local SEO to attract nearby customers",
+        "Ecommerce SEO to boost product sales",
+        "Content that engages and converts",
+      ],
+      image: "/ring.png", // Replace with actual image path
+    },
+    {
+      title: "Convert Visitors into Customers",
+      description: [
+        "PPC campaigns that make the most of your budget",
+        "Social ads to grow your audience fast",
+        "Programmatic advertisements that reach the right people",
+        "Geofencing to connect with local buyers",
+      ],
+      image: "/cube.png", // Replace with actual image path
+    },
+    {
+      title: "Retain Customers & Increase Loyalty",
+      description: [
+        "Smart analytics to guide your decisions",
+        "Call tracking so you never miss a lead",
+        "Lead management tools to close deals faster",
+        
+      ],
+      image: "/star.png", // Replace with actual image path
+    },
+    {
+      title: "Optimize & Scale Your Business",
+      description: [
+        "Website designs that leave a lasting impression",
+        "CRO to turn visitors into loyal customers",
+        "Landing pages that drive action",
+        "Social media management to build brand loyalty",
+      ],
+      image: "/tube.png", // Replace with actual image path
+    },
+  ];
+
   return (
     <>
-    <h2 className="text-center text-xl md:text-4xl text-black dark:text-white md:text-6xl  my-5  font-bold">
-    How We Drive Revenue
-          </h2>
-          <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-4xl mt-2 mx-auto">
-          Looking to grow your business? Our personalized marketing strategies are built by experts and powered by data to help you reach your revenue goals. Say goodbye to the hassle of working with multiple agencies. Let's get you the results you deserve.
-          </p>
-      <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8">
-        <Card title="
-         SEO that gets you noticed online
-Local SEO to attract nearby customers
-Ecommerce SEO to boost product sales
-Content that engages and converts
-" icon={<AceternityIcon />}>
-          <CanvasRevealEffect
-            animationSpeed={5.1}
-            containerClassName="bg-text"
-          />
-        </Card>
-        <Card title="PPC campaigns that make the most of your budget
-Social ads to grow your audience fast
-Programmatic advertisements that reach the right people
-Geofencing to connect with local buyers
-" icon={<AceternityIcon />}>
-          <CanvasRevealEffect
-            animationSpeed={3}
-            containerClassName="bg-text"
-            colors={[
-              [255, 0, 0],
-              [232, 0, 0],
-            ]}
-            
-          />
-          {/* Radial gradient for the cute fade */}
-          <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
-        </Card>
-        <Card title="Smart analytics to guide your decisions
-Call tracking so you never miss a lead
-Lead management tools to close deals faster
-"
+      <h2 className="text-center text-xl md:text-4xl text-black dark:text-white md:text-6xl mt-7 font-bold">
+        How We Drive Revenue
+      </h2>
+      <p className="text-center md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-4xl mt-2 mx-auto">
+        Looking to grow your business? Our personalized marketing strategies are
+        built by experts and powered by data to help you reach your revenue
+        goals. Say goodbye to the hassle of working with multiple agencies.
+        Let's get you the results you deserve.
+      </p>
 
- icon={<AceternityIcon />}>
-          <CanvasRevealEffect
-            animationSpeed={3}
-            containerClassName="bg-text"
-            colors={[[255, 255, 255]]}
-          />
-        </Card>
-        <Card title=". Website designs that leave a lasting impression
-. CRO to turn visitors into loyal customers
-. Landing pages that drive action
-. Social media management to build brand loyalty
-" icon={<AceternityIcon />}>
-          <CanvasRevealEffect
-            animationSpeed={3}
-            containerClassName="bg-text border-radius-[50%]"
-            colors={[[125, 211, 252]]}
-          />
-        </Card>
+      {/* Container for Cards - Flex Row */}
+      <div className="py-20 flex flex-wrap justify-center text-center gap-6 w-full px-8">
+        {cardData.map((card, index) => (
+          <div key={index} className="relative w-full max-w-xs">
+            <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] rounded-full blur-3xl" />
+            <div className="relative shadow-xl bg-gray-900 border border-gray-800 px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-center items-center">
+              
+              {/* Card Image */}
+              <img 
+                src={card.image} 
+                alt={card.title} 
+                className="w-[125] h-[125] object-cover rounded-full mb-4 relative z-50"
+              />
+
+              <h4 className="font-bold text-xl text-primary mb-4 relative z-50">
+                {card.title}
+              </h4>
+
+              {/* List Items for Description */}
+              <ul className="list-disc pl-5 text-white mb-4 relative z-50 text-left">
+                {card.description.map((item, i) => (
+                  <li key={i} className="text-base">{item}</li>
+                ))}
+              </ul>
+
+            
+
+              {/* Meteor Effect */}
+              <Meteors number={20} />
+            </div>
+          </div>
+        ))}
       </div>
     </>
   );
 }
-
-const Card = ({
-  title,
-  icon,
-  children,
-}: {
-  title: string;
-  icon: React.ReactNode;
-  children?: React.ReactNode;
-}) => {
-  const [hovered, setHovered] = React.useState(false);
-  return (
-    <div
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      className="border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative h-[30rem] relative"
-    >
-      <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-      <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-      <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-      <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-
-      <AnimatePresence>
-        {hovered && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="h-full w-full absolute inset-0"
-          >
-            {children}
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <div className="relative z-20">
-        <div className="text-center group-hover/canvas-card:-translate-y-4 group-hover/canvas-card:opacity-0 transition duration-200 w-full  mx-auto flex items-center justify-center">
-          {icon}
-        </div>
-        <h2 className="dark:text-white text-xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200">
-          {title}
-        </h2>
-      </div>
-    </div>
-  );
-};
-
-const AceternityIcon = () => {
-  return (
-    <svg
-      width="66"
-      height="65"
-      viewBox="0 0 66 65"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-10 w-10 text-black dark:text-white group-hover/canvas-card:text-white "
-    >
-      <path
-        d="M8 8.05571C8 8.05571 54.9009 18.1782 57.8687 30.062C60.8365 41.9458 9.05432 57.4696 9.05432 57.4696"
-        stroke="currentColor"
-        strokeWidth="15"
-        strokeMiterlimit="3.86874"
-        strokeLinecap="round"
-        style={{ mixBlendMode: "darken" }}
-      />
-    </svg>
-  );
-};
-
-export const Icon = ({ className, ...rest }: any) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth="1.5"
-      stroke="currentColor"
-      className={className}
-      {...rest}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
-    </svg>
-  );
-};

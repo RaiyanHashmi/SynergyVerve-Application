@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
-import HeroImage from "../../assets/img/aunty.png";
+
 import HeroBG from "../../assets/img/Group 2.png";
 import EmailBar from "./emailBar";
 import '@/styles/globals.css';
@@ -56,13 +56,6 @@ const OurPartners: React.FC = () => {
           </div>
 
           <div className="relative w-full md:w-1/2 h-full">
-            <Image
-              src={HeroImage}
-              alt="Synergy Verve Team"
-              width={500}
-              height={700}
-              className="drop-shadow-xl"
-            />
           </div>
         </div>
       </section>
