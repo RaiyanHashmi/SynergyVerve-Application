@@ -7,6 +7,12 @@ import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 export function RevenueDrive() {
   return (
     <>
+    <h2 className="text-center text-xl md:text-4xl text-black dark:text-white md:text-6xl  my-5  font-bold">
+    How We Drive Revenue
+          </h2>
+          <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-4xl mt-2 mx-auto">
+          Looking to grow your business? Our personalized marketing strategies are built by experts and powered by data to help you reach your revenue goals. Say goodbye to the hassle of working with multiple agencies. Let's get you the results you deserve.
+          </p>
       <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8">
         <Card title="
          SEO that gets you noticed online
