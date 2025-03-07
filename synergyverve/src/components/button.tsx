@@ -1,20 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { Geist, Geist_Mono } from "next/font/google";
-import { Menu, X } from "lucide-react";
 import { HoverBorderGradient } from "./ui/HoverBorderGradient";
 import '@/styles/globals.css';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+
+
 
 interface NavBarProps {
   text: string;

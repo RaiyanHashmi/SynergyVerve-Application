@@ -11,7 +11,7 @@ export function BoostTheMetrics(): React.JSX.Element {
         <div>
             <h5 className="text-xl font-bold">Drive More Visitors and Visibility</h5>
           <p className="text-neutral-800 dark:text-neutral-200 text-lg  font-normal mb-8">
-          Without consistent website traffic, you're missing out on potential leads and sales. Our tailored SEO strategies can help improve your rankings, making it easier for people to find you and explore what you offer.
+          Without consistent website traffic, youre missing out on potential leads and sales. Our tailored SEO strategies can help improve your rankings, making it easier for people to find you and explore what you offer.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image

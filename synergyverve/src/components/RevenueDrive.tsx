@@ -55,7 +55,7 @@ export function RevenueDrive() {
         Looking to grow your business? Our personalized marketing strategies are
         built by experts and powered by data to help you reach your revenue
         goals. Say goodbye to the hassle of working with multiple agencies.
-        Let's get you the results you deserve.
+        Let&apos;s get you the results you deserve.
       </p>
 
       {/* Container for Cards - Flex Row */}

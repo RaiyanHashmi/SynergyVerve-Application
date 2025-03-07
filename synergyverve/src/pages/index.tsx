@@ -5,47 +5,15 @@ import { RevenueDrive } from "../components/RevenueDrive";
 import {CareersSection} from "../components/CareersSection";
 import { Inter } from "next/font/google";
 import { HeroParallax } from "../components/ui/HeroParallax";
-import MarketingSection from "@/components/MarketingSection";
+import MarketingSection from "@/components/marketingSection";
 import { BoostTheMetrics as BTM } from "@/components/BoostTheMetricsSection";
 import { TabsDemo } from "@/components/tabsDemo";
-
-
-const testimonials = [
-  {
-    name: "John Doe",
-    feedback: "Great service!",
-    avatar: "/john.jpg",
-  },
-  {
-    name: "Jane Smith",
-    feedback: "Highly recommend!",
-    avatar: "/jane.jpg",
-  },
-  // Add more testimonials as needed
-];
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   weight: ["400", "700"],
 });
-const items = [
-  {
-    title: "Item 1",
-    link: "/item-1",
-    thumbnail: "/one.jpg",
-  },
-  {
-    title: "Item 2",
-    link: "/item-2",
-    thumbnail: "/two.jpg",
-  },
-  {
-    title: "Item 3",
-    link: "/item-3",
-    thumbnail: "/three.jpg",
-  },
-];
 
 const products = [
   {
@@ -92,27 +60,21 @@ const products = [
     title: "Product 2",
     link: "/product-2",
     thumbnail: "/two.jpg",
-  },
-  // Add more products as needed
+  }
 ];
-      // <Testimonial testimonials={testimonials} />
+
 export default function Home() {
   return (
-    <>
+    <div className={`${inter.variable} font-sans`}>
       <NavBar />
       <Hero />
       <RevenueDrive />
       <AboutSec />
-
       <HeroParallax products={products} />
-
       <MarketingSection />
-      {/* <OurPartners /> */}
       <CareersSection/>
       <BTM/>
       <TabsDemo/>
-   
-      {/* <Testimonial testimonials={testimonial} /> */}
-    </>
+    </div>
   );
 }

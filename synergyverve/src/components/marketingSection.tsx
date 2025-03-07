@@ -1,5 +1,4 @@
 import React from 'react';
-import img from '../Group 2.png';
 
 const marketingSection = () => {
   return (
