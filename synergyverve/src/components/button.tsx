@@ -1,12 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import React from "react";
 import { HoverBorderGradient } from "./ui/HoverBorderGradient";
 import '@/styles/globals.css';
-
-
-
-
 
 interface NavBarProps {
   text: string;
@@ -19,8 +15,6 @@ export default function NavBar({
   href = "/get-started",
   className = ""
 }: NavBarProps) {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <a
       href={href}

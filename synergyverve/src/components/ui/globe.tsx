@@ -14,19 +14,25 @@ declare module '@react-three/fiber' {
   }
 }
 
+extend({ ThreeGlobe });
+
 const RING_PROPAGATION_SPEED = 3;
 const aspect = 1.2;
 const cameraZ = 300;
 
-type Position = {
-  order: number;
+interface Position {
   startLat: number;
   startLng: number;
   endLat: number;
   endLng: number;
-  arcAlt: number;
   color: string;
-};
+  arcAlt: number;
+  order: number;
+}
+
+interface RingData {
+  color: (t: number) => string;
+}
 
 export type GlobeConfig = {
   pointSize?: number;
@@ -127,6 +133,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
         lat: arc.startLat,
         lng: arc.startLng,
       });
+    // remove duplicates for same lat and lng
       points.push({
         size: defaultProps.pointSize,
         order: arc.order,
@@ -150,79 +157,70 @@ export function Globe({ globeConfig, data }: WorldProps) {
   };
 
   useEffect(() => {
-    if (globeRef.current && globeData) {
-      globeRef.current
-        .hexPolygonsData(countries.features)
-        .hexPolygonResolution(3)
-        .hexPolygonMargin(0.7)
-        .showAtmosphere(defaultProps.showAtmosphere)
-        .atmosphereColor(defaultProps.atmosphereColor)
-        .atmosphereAltitude(defaultProps.atmosphereAltitude)
-        .hexPolygonColor((e) => {
-          return defaultProps.polygonColor;
-        });
-      startAnimation();
-    }
-  }, [globeData]);
-
-  const startAnimation = () => {
     if (!globeRef.current || !globeData) return;
 
-    globeRef.current
-      .arcsData(data)
-      .arcStartLat((d) => (d as { startLat: number }).startLat * 1)
-      .arcStartLng((d) => (d as { startLng: number }).startLng * 1)
-      .arcEndLat((d) => (d as { endLat: number }).endLat * 1)
-      .arcEndLng((d) => (d as { endLng: number }).endLng * 1)
-      .arcColor((e: any) => (e as { color: string }).color)
-      .arcAltitude((e) => {
-        return (e as { arcAlt: number }).arcAlt * 1;
-      })
-      .arcStroke((e) => {
-        return [0.32, 0.28, 0.3][Math.round(Math.random() * 2)];
-      })
-      .arcDashLength(defaultProps.arcLength)
-      .arcDashInitialGap((e) => (e as { order: number }).order * 1)
-      .arcDashGap(15)
-      .arcDashAnimateTime((e) => defaultProps.arcTime);
+    // Initialize globe with polygon data
+    const globe = globeRef.current;
+    globe
+      .hexPolygonsData(countries.features)
+      .hexPolygonResolution(3)
+      .hexPolygonMargin(0.7)
+      .showAtmosphere(defaultProps.showAtmosphere)
+      .atmosphereColor(defaultProps.atmosphereColor)
+      .atmosphereAltitude(defaultProps.atmosphereAltitude)
+      .hexPolygonColor(() => defaultProps.polygonColor);
 
-    globeRef.current
-      .pointsData(data)
-      .pointColor((e) => (e as { color: string }).color)
+    // Set up arcs
+    globe
+      .arcsData(globeData)
+      .arcStartLat((obj: any) => Number((obj as Position).startLat) || 0)
+      .arcStartLng((obj: any) => Number((obj as Position).startLng) || 0)
+      .arcEndLat((obj: any) => Number((obj as Position).endLat) || 0)
+      .arcEndLng((obj: any) => Number((obj as Position).endLng) || 0)
+      .arcColor((obj: any) => String((obj as Position).color || '#ffffff'))
+      .arcAltitude((obj: any) => Number((obj as Position).arcAlt) || 0)
+      .arcStroke(() => [0.32, 0.28, 0.3][Math.round(Math.random() * 2)])
+      .arcDashLength(defaultProps.arcLength)
+      .arcDashInitialGap((obj: any) => Number((obj as Position).order) || 0)
+      .arcDashGap(15)
+      .arcDashAnimateTime(() => Number(defaultProps.arcTime) || 2000);
+
+    // Set up points
+    globe
+      .pointsData(globeData)
+      .pointColor((obj: any) => String((obj as Position).color || '#ffffff'))
       .pointsMerge(true)
       .pointAltitude(0.0)
       .pointRadius(2);
 
-    globeRef.current
+    // Set up rings
+    globe
       .ringsData([])
-      .ringColor((e: any) => (t: any) => e.color(t))
-      .ringMaxRadius(defaultProps.maxRings)
+      .ringColor((obj: any) => (t: number) => {
+        const color = (obj as RingData)?.color;
+        return typeof color === 'function' ? color(t) : '#ffffff';
+      })
+      .ringMaxRadius(Number(defaultProps.maxRings) || 3)
       .ringPropagationSpeed(RING_PROPAGATION_SPEED)
       .ringRepeatPeriod(
-        (defaultProps.arcTime * defaultProps.arcLength) / defaultProps.rings
+        (Number(defaultProps.arcTime) * Number(defaultProps.arcLength)) / Number(defaultProps.rings)
       );
-  };
 
-  useEffect(() => {
-    if (!globeRef.current || !globeData) return;
-
+    // Set up ring animation
     const interval = setInterval(() => {
-      if (!globeRef.current || !globeData) return;
-      numbersOfRings = genRandomNumbers(
+      if (!globe || !globeData) return;
+      const numbersOfRings = genRandomNumbers(
         0,
-        data.length,
-        Math.floor((data.length * 4) / 5)
+        globeData.length,
+        Math.floor((globeData.length * 4) / 5)
       );
-
-      globeRef.current.ringsData(
-        globeData.filter((d, i) => numbersOfRings.includes(i))
-      );
+      globe.ringsData(globeData.filter((d, i) => numbersOfRings.includes(i)));
     }, 2000);
 
     return () => {
       clearInterval(interval);
     };
-  }, [globeRef.current, globeData]);
+  }, [globeData, defaultProps, countries.features]);
 
   return (
     <>

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Meteors } from "./ui/meteors";
+import Image from "next/image";
 
 export function RevenueDrive() {
   const cardData = [
@@ -66,10 +67,12 @@ export function RevenueDrive() {
             <div className="relative shadow-xl bg-gray-900 border border-gray-800 px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-center items-center">
               
               {/* Card Image */}
-              <img 
+              <Image 
                 src={card.image} 
                 alt={card.title} 
-                className="w-[125] h-[125] object-cover rounded-full mb-4 relative z-50"
+                width={125}
+                height={125}
+                className="object-cover rounded-full mb-4 relative z-50"
               />
 
               <h4 className="font-bold text-xl text-primary mb-4 relative z-50">
