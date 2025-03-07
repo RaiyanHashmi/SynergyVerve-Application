@@ -1,9 +1,6 @@
 import React from "react";
-import { InView } from "react-intersection-observer";
-import CountUp from "react-countup";
 import  Telescope  from "../../assets/img/Telescope.png"; 
 import  Rocket  from "../../assets/img/rocket.png";
-import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 
 const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
@@ -12,7 +9,6 @@ const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
 
 
 import Image from 'next/image';
-import { HeartIcon } from "lucide-react";
 const globeConfig = {
   pointSize: 4,
   globeColor: "#062056",
