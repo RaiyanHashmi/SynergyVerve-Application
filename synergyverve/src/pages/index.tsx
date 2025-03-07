@@ -1,14 +1,13 @@
 import NavBar from "../components/navbar";
 import Hero from "../components/hero";
 import AboutSec from "../components/AboutCompanySection";
-// import MarketingSection from "../components/marketingSection";
-// import Testimonial from "../components/ui/animated-testimonials";
-// import OurPartners from "@/components/ourPartners";
 import { RevenueDrive } from "../components/RevenueDrive";
 import {CareersSection} from "../components/CareersSection";
 import { Inter } from "next/font/google";
 import { HeroParallax } from "../components/ui/HeroParallax";
 import MarketingSection from "@/components/MarketingSection";
+import { BoostTheMetrics as BTM } from "@/components/BoostTheMetricsSection";
+import { TabsDemo } from "@/components/tabsDemo";
 
 
 const testimonials = [
@@ -110,6 +109,8 @@ export default function Home() {
       <MarketingSection />
       {/* <OurPartners /> */}
       <CareersSection/>
+      <BTM/>
+      <TabsDemo/>
    
       {/* <Testimonial testimonials={testimonial} /> */}
     </>

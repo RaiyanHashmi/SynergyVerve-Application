@@ -403,9 +403,7 @@ const AboutCompanySect = () => {
   return (
         <section className="relative bg-secondary text-text py-20 bg-secondary rounded-3xl p-10 m-6 mx-20 md:p-16">
           {/* Background Elements */}
-          <World data={sampleArcs} globeConfig={globeConfig} 
-        style={{ Height:300, Width:300,}}
-        />
+        <World data={sampleArcs} globeConfig={globeConfig} />
           <Image
           alt=""
           src={Telescope}
