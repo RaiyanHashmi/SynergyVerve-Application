@@ -1,4 +1,4 @@
-import NavBar from "../components/navbar";
+
 import Hero from "../components/hero";
 import AboutSec from "../components/AboutCompanySection";
 import { RevenueDrive } from "../components/RevenueDrive";
@@ -8,7 +8,8 @@ import { HeroParallax } from "../components/ui/HeroParallax";
 import MarketingSection from "@/components/marketingSection";
 import { BoostTheMetrics as BTM } from "@/components/BoostTheMetricsSection";
 import { TabsDemo } from "@/components/tabsDemo";
-
+import { HeaderMegaMenu } from "@/components/HeaderMegaMenu";
+import '@mantine/core/styles.css';
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -66,7 +67,7 @@ const products = [
 export default function Home() {
   return (
     <div className={`${inter.variable} font-sans`}>
-      <NavBar />
+      <HeaderMegaMenu />
       <Hero />
       <RevenueDrive />
       <AboutSec />

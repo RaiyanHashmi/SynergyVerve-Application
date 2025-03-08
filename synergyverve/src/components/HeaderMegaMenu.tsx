@@ -403,7 +403,7 @@ import {
 import { useDisclosure } from '@mantine/hooks';
 import MantineLogo from '../../assets/img/white-synergy3.png';
 import Image from 'next/image';
-import classes from '../../styles/HeaderMegaMenu.module.css';
+import classes from '../styles/HeaderMegaMenu.module.css'
 
 const mockdata = [
   {
