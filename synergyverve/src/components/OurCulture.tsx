@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 
-export function CareersSection() {
+export function OurCulture() {
   const teamMembers = [
     { name: "Member 1", image: "/person1.jpg" },
     { name: "Member 2", image: "/person2.jpg" },
@@ -27,7 +27,11 @@ export function CareersSection() {
         {/* Right Column - 60% */}
         <div className="w-3/5">
           <p className="text-lg text-text mt-8 ps-4 dark:text-gray-300 max-w-3xl">
-          Synergy Verve is more than just a digital marketing agency. It's a place for growth, creativity, and passion. Our expert marketers, designers, developers, and data analysts work together to create some of the most innovative work on the web. If you're passionate about digital marketing and ready to impact, check out our open positions.
+            Synergy Verve is more than just a digital marketing agency. It&apos;s a place
+            for growth, creativity, and passion. Our expert marketers, designers,
+            developers, and data analysts work together to create some of the most
+            innovative work on the web. If you&apos;re passionate about digital marketing
+            and ready to make an impact, check out our open positions.
           </p>
         </div>
       </div>
@@ -52,7 +56,7 @@ export function CareersSection() {
         href="/careers"
         className="mt-6 inline-block bg-primary hover:bg-primary text-text font-semibold px-6 py-3 rounded-lg transition-all h-25 w-25"
       >
-        View Open Positions →
+        Look Inside Synergy Verve →
       </a>
     </section>
   );

@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 
-export function CareersSection() {
+export function OurAwards() {
   const teamMembers = [
     { name: "Member 1", image: "/person1.jpg" },
     { name: "Member 2", image: "/person2.jpg" },
@@ -17,17 +17,17 @@ export function CareersSection() {
         {/* Left Column - 40% */}
         <div className="w-2/5">
           <span className="bg-primary text-text px-4 py-3 text-lg font-semibold rounded-full">
-            Careers
+          Awards
           </span>
           <h2 className="text-6xl md:text-6xl font-bold text-text dark:text-white mt-4">
-            Careers at SynergyVerve
+          Our Awards
           </h2>
         </div>
 
         {/* Right Column - 60% */}
         <div className="w-3/5">
           <p className="text-lg text-text mt-8 ps-4 dark:text-gray-300 max-w-3xl">
-          Synergy Verve is more than just a digital marketing agency. It's a place for growth, creativity, and passion. Our expert marketers, designers, developers, and data analysts work together to create some of the most innovative work on the web. If you're passionate about digital marketing and ready to impact, check out our open positions.
+          Synergy Verve has earned recognition from prestigious organizations across the marketing, design, and business sectors. With countless testimonials and over 500 glowing reviews, we are proud to have achieved national recognition for the impactful work we do.
           </p>
         </div>
       </div>
@@ -52,7 +52,7 @@ export function CareersSection() {
         href="/careers"
         className="mt-6 inline-block bg-primary hover:bg-primary text-text font-semibold px-6 py-3 rounded-lg transition-all h-25 w-25"
       >
-        View Open Positions →
+        Explore Our Awards →
       </a>
     </section>
   );

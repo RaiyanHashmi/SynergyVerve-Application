@@ -31,7 +31,6 @@ export function RevenueDrive() {
         "Smart analytics to guide your decisions",
         "Call tracking so you never miss a lead",
         "Lead management tools to close deals faster",
-        
       ],
       image: "/star.png", // Replace with actual image path
     },
@@ -65,11 +64,10 @@ export function RevenueDrive() {
           <div key={index} className="relative w-full max-w-xs">
             <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] rounded-full blur-3xl" />
             <div className="relative shadow-xl bg-gray-900 border border-gray-800 px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-center items-center">
-              
               {/* Card Image */}
-              <Image 
-                src={card.image} 
-                alt={card.title} 
+              <Image
+                src={card.image}
+                alt={card.title}
                 width={125}
                 height={125}
                 className="object-cover rounded-full mb-4 relative z-50"
@@ -82,11 +80,11 @@ export function RevenueDrive() {
               {/* List Items for Description */}
               <ul className="list-disc pl-5 text-white mb-4 relative z-50 text-left">
                 {card.description.map((item, i) => (
-                  <li key={i} className="text-base">{item}</li>
+                  <li key={i} className="text-base">
+                    {item}
+                  </li>
                 ))}
               </ul>
-
-            
 
               {/* Meteor Effect */}
               <Meteors number={20} />

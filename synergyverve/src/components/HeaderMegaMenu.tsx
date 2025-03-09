@@ -462,21 +462,24 @@ export function HeaderMegaMenu() {
   ));
 
   return (
-    <Box pb={120}>
-      <header className={classes.header}>
+    <Box >
+      <header className={classes.header } >
         <Group justify="space-between" h="100%">
-          <Image src={MantineLogo} alt="Logo" width={30} height={30} />
+          <Image src={MantineLogo} alt="Logo" width={250} height={150} />
 
-          <Group h="100%" gap={0} visibleFrom="sm">
-            <a href="#" className={classes.link}>
+          <Group h="100%"  justify="space-between" visibleFrom="md" px="md">
+            <a href="#"  className={classes.link}>
               Home
             </a>
-            <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
+            <a href="#" className={classes.link}>
+            About
+            </a>
+            <HoverCard width={1000} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
                 <a href="#" className={classes.link}>
                   <Center inline>
                     <Box component="span" mr={5}>
-                      Features
+                      Services
                     </Box>
                     <IconChevronDown size={16} color={theme.colors.blue[6]} />
                   </Center>
@@ -485,7 +488,7 @@ export function HeaderMegaMenu() {
 
               <HoverCard.Dropdown style={{ overflow: 'hidden' }}>
                 <Group justify="space-between" px="md">
-                  <Text fw={500}>Features</Text>
+                  <Text fw={500}>Services</Text>
                   <Anchor href="#" fz="xs">
                     View all
                   </Anchor>
@@ -512,11 +515,9 @@ export function HeaderMegaMenu() {
                 </div>
               </HoverCard.Dropdown>
             </HoverCard>
+           
             <a href="#" className={classes.link}>
-              Learn
-            </a>
-            <a href="#" className={classes.link}>
-              Academy
+             Blogs
             </a>
           </Group>
 

@@ -2,13 +2,13 @@
 import Hero from "../components/hero";
 import AboutSec from "../components/AboutCompanySection";
 import { RevenueDrive } from "../components/RevenueDrive";
-import {CareersSection} from "../components/CareersSection";
 import { Inter } from "next/font/google";
 import { HeroParallax } from "../components/ui/HeroParallax";
 import MarketingSection from "@/components/marketingSection";
 import { BoostTheMetrics as BTM } from "@/components/BoostTheMetricsSection";
 import { TabsDemo } from "@/components/tabsDemo";
 import { HeaderMegaMenu } from "@/components/HeaderMegaMenu";
+import {Footer} from "@/components/Footer";
 import '@mantine/core/styles.css';
 const inter = Inter({
   subsets: ["latin"],
@@ -73,9 +73,10 @@ export default function Home() {
       <AboutSec />
       <HeroParallax products={products} />
       <MarketingSection />
-      <CareersSection/>
+      
       <BTM/>
       <TabsDemo/>
+      <Footer/>
     </div>
   );
 }
