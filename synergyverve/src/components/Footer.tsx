@@ -1,65 +1,59 @@
-import Image from "next/image";
-import React from "react";
-// import { Timeline } from "@/components/ui/timeline";
 
+import Image from 'next/image';
 
-export function Footer(): React.JSX.Element {
-  
+import MantineLogo from '../../assets/img/white-synergy3.png';
+
+export default function Footer() {
+  const footerLinks = [
+    {
+      title: "Popular searches",
+      links: ["Resume templates", "Mobile apps", "Presentation templates", "UI kits", "Calendar templates"],
+    },
+    {
+      title: "Most used",
+      links: ["Material 3 Design Kit", "iOS 18 and iPadOS 18", "Figma auto layout playground", "Anima - Figma to React, HTML", "Ant Design Open Source"],
+    },
+    {
+      title: "Recommended categories",
+      links: ["Instagram templates", "Workshop templates", "Data templates", "Device mockups", "Design inspirations"],
+    },
+    {
+      title: "Top categories",
+      links: ["Design templates", "Libraries", "Icons", "Development", "Brainstorming"],
+    },
+  ];
+
   return (
-    <footer className="bg-gray-100 py-10 text-gray-700">
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 flex flex-col md:flex-row justify-between">
-        {/* Left Section */}
-        <div className="mb-6 md:mb-0">
-          <div className="flex items-center space-x-2">
-            <div className="bg-blue-500 text-white p-2 rounded-full">
-              <span className="text-xl">📌</span>
-            </div>
-            <h2 className="text-xl font-semibold">Mantine</h2>
-          </div>
-          <p className="mt-2 text-sm max-w-xs">
-            Build fully functional accessible web applications faster than ever
-          </p>
-        </div>
-
+    <footer className="bg-secondary text-text text-xl py-12 mt-20">
+      <div className="container mx-auto px-6 md:px-12 lg:px-20">
+        
         {/* Links Section */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="font-semibold mb-2">About</h3>
-            <ul className="space-y-1 text-sm">
-              <li><a href="#" className="hover:underline">Features</a></li>
-              <li><a href="#" className="hover:underline">Pricing</a></li>
-              <li><a href="#" className="hover:underline">Support</a></li>
-              <li><a href="#" className="hover:underline">Forums</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-2">Project</h3>
-            <ul className="space-y-1 text-sm">
-              <li><a href="#" className="hover:underline">Contribute</a></li>
-              <li><a href="#" className="hover:underline">Media assets</a></li>
-              <li><a href="#" className="hover:underline">Changelog</a></li>
-              <li><a href="#" className="hover:underline">Releases</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-2">Community</h3>
-            <ul className="space-y-1 text-sm">
-              <li><a href="#" className="hover:underline">Join Discord</a></li>
-              <li><a href="#" className="hover:underline">Follow on Twitter</a></li>
-              <li><a href="#" className="hover:underline">Email newsletter</a></li>
-              <li><a href="#" className="hover:underline">GitHub discussions</a></li>
-            </ul>
-          </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-10">
+          {footerLinks.map((section, index) => (
+            <div key={index}>
+              <h4 className="text-accent font-bold mb-3">{section.title}</h4>
+              <ul className="space-y-1">
+                {section.links.map((link, i) => (
+                  <li key={i}>
+                    <a href="#" className="hover:text-primary transition duration-200">{link}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
-      </div>
 
-      {/* Bottom Section */}
-      <div className="mt-10 text-center text-sm text-gray-500">
-        <p>&copy; 2020 mantine.dev. All rights reserved.</p>
-        <div className="mt-2 flex justify-center space-x-4 text-gray-600">
-          <a href="#" className="hover:text-gray-900">🐦</a>
-          <a href="#" className="hover:text-gray-900">📺</a>
-          <a href="#" className="hover:text-gray-900">📸</a>
+        {/* Bottom Section */}
+        <div className="border-t border-gray-700 pt-6 text-center">
+                    <Image src={MantineLogo} alt="Logo" width={250} height={150} />
+          
+
+          <p className="mt-2 text-gray-500">
+            © {new Date().getFullYear()} Figma, Inc. • 
+            <a href="#" className="hover:text-white mx-2">Site map</a> • 
+            <a href="#" className="hover:text-white mx-2">Community guidelines</a> • 
+            <a href="#" className="hover:text-white mx-2">Terms of service</a>
+          </p>
         </div>
       </div>
     </footer>

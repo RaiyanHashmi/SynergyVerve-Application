@@ -17,21 +17,17 @@ export function OurCulture() {
         {/* Left Column - 40% */}
         <div className="w-2/5">
           <span className="bg-primary text-text px-4 py-3 text-lg font-semibold rounded-full">
-            Careers
+          Our Culture
           </span>
           <h2 className="text-6xl md:text-6xl font-bold text-text dark:text-white mt-4">
-            Careers at SynergyVerve
+          Our Culture
           </h2>
         </div>
 
         {/* Right Column - 60% */}
         <div className="w-3/5">
           <p className="text-lg text-text mt-8 ps-4 dark:text-gray-300 max-w-3xl">
-            Synergy Verve is more than just a digital marketing agency. It&apos;s a place
-            for growth, creativity, and passion. Our expert marketers, designers,
-            developers, and data analysts work together to create some of the most
-            innovative work on the web. If you&apos;re passionate about digital marketing
-            and ready to make an impact, check out our open positions.
+          Synergy Verve has a team of over 500 passionate professionals who work collaboratively to deliver the best digital marketing solutions. We believe in innovation, creativity, and building lasting partnerships. By aligning with industry giants like Google, Facebook, and Bing, we bring unmatched expertise to every project, providing meaningful results for our clients.
           </p>
         </div>
       </div>
