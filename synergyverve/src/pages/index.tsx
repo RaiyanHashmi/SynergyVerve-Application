@@ -7,7 +7,7 @@ import { HeroParallax } from "../components/ui/HeroParallax";
 import MarketingSection from "@/components/marketingSection";
 import { BoostTheMetrics as BTM } from "@/components/BoostTheMetricsSection";
 import { TabsDemo } from "@/components/tabsDemo";
-import { HeaderMegaMenu } from "@/components/HeaderMegaMenu";
+import HeaderMegaMenu from "@/components/HeaderMegaMenu";
 import TransformSection from "@/components/TransformSection";
 import Footer from "@/components/Footer";
 import '@mantine/core/styles.css' assert { type: 'css' };

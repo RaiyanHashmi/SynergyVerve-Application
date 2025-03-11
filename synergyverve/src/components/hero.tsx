@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
 
           </div>
 
-          <div className="relative w-full md:w-1/2 h-auto">
+          <div className="relative w-full md:w-1/2 h-auto z-10">
             <Image
               src={HeroImage}
               alt="Synergy Verve Team"
