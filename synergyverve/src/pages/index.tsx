@@ -75,10 +75,9 @@ export default function Home() {
       <AboutSec />
       <HeroParallax products={products} />
       <MarketingSection />
-      
+      <TransformSection/>
       <BTM/>
       <TabsDemo/>
-      <TransformSection/>
       <Footer/>
 
     </div>

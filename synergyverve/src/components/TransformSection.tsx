@@ -23,10 +23,10 @@ const TransformSection: React.FC = () => {
       {/* Right Image Section */}
     
       <div className="md:w-2/3 p-6">
-      <span className=" bg-accent text-white text-sm px-3 py-2 rounded-full my-5">
+      <span className=" bg-primary text-white text-md px-3 py-3 rounded-full  ">
             Transformation 
           </span>
-        <h2 className="text-6xl font-bold text-text ">
+        <h2 className="text-6xl font-bold text-text  mt-5">
           Transform Your Marketing into Revenue with Synergy Verve
         </h2>
         <p className="text-xl text-gray mt-4">

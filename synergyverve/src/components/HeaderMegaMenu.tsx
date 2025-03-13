@@ -137,29 +137,29 @@ const MegaMenu = () => {
                   />
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex h-full">
-          <a href="#" className="h-full px-6 no-underline text-xl font-bold flex items-center hover:bg-gray-100/10">
+        <div className="hidden lg:flex h-full ">
+          <a href="#" className="hover:text-accent h-full px-6 no-underline text-xl font-bold flex items-center hover:bg-gray-100/10">
             HOME
           </a>
-          <a href="#" className="h-full px-6 no-underline text-xl font-bold flex items-center hover:bg-gray-100/10">
+          <a href="#" className="hover:text-accent h-full px-6 no-underline text-xl font-bold flex items-center hover:bg-gray-100/10">
             ABOUT
           </a>
           <div 
-            className="h-full relative"
+            className="h-full relative hover:text-accent"
             ref={servicesTriggerRef}
             onMouseEnter={handleServicesMouseEnter}
           >
-            <a href="#" className="h-full px-6 no-underline text-xl font-bold flex items-center hover:bg-gray-100/10">
+            <a href="#" className="hover:text-accent h-full px-6 no-underline text-xl font-bold flex items-center hover:bg-gray-100/10">
               <span className="mr-1">SERVICES</span>
               <ChevronDown size={16} />
             </a>
           </div>
           
-          <a href="#" className="h-full px-6 no-underline text-xl font-bold flex items-center hover:bg-gray-100/10"
+          <a href="#" className="hover:text-accent h-full px-6 no-underline text-xl font-bold flex items-center hover:bg-gray-100/10"
              onClick={() => setMegaMenuOpen(false)}>
             BLOG
           </a>
-          <a href="#" className="h-full px-6 no-underline text-xl font-bold flex items-center hover:bg-gray-100/10"
+          <a href="#" className="hover:text-accent h-full px-6 no-underline text-xl font-bold flex items-center hover:bg-gray-100/10"
              onClick={() => setMegaMenuOpen(false)}>
             CONTACT
           </a>

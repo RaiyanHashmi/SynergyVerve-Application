@@ -41,9 +41,12 @@ export function TabsDemo() {
   ];
 
   return (
+    <section>
+    <h2 className="text-center mt-10  text-text text-6xl md:text-6xl font-bold text-text dark:text-white">Inside Synergy Verve</h2>
     <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative  flex flex-col  mx-auto w-full  items-start justify-center my-10">
       <Tabs tabs={tabs} />
     </div>
+    </section>
   );
 }
 
