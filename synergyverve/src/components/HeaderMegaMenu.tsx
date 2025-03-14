@@ -5,9 +5,9 @@ import { ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
 
 const services = [
   {
-        category: "Data Engineering",
-        subcategories: [
-          { name: "Data Pipeline Development", link: "/services/data-pipeline-development" },
+    category: "Data Engineering",
+    subcategories: [
+          { name: "Data Pipeline Development", link: "/services/DataEngineering/data-pipeline-development" },
           { name: "Cloud Data Solutions", link: "/services/cloud-data-solutions" },
           { name: "Data Warehousing & Lakes", link: "/services/data-warehousingAndLakes" },
           { name: "ETL & Real-Time Streaming", link: "/services/etl-real-time-streaming" },
@@ -138,7 +138,7 @@ const MegaMenu = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex h-full ">
-          <a href="#" className="hover:text-accent h-full px-6 no-underline text-xl font-bold flex items-center hover:bg-gray-100/10">
+          <a href="/" className="hover:text-accent h-full px-6 no-underline text-xl font-bold flex items-center hover:bg-gray-100/10">
             HOME
           </a>
           <a href="#" className="hover:text-accent h-full px-6 no-underline text-xl font-bold flex items-center hover:bg-gray-100/10">

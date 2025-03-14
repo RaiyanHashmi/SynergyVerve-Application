@@ -1,6 +1,4 @@
 "use client";
-
-import Image from "next/image";
 import { Tabs } from "./ui/tabs";
 import { CareersSection } from "./CareersSection";
 import { OurCulture } from "./OurCulture";
@@ -49,15 +47,3 @@ export function TabsDemo() {
     </section>
   );
 }
-
-const DummyContent = () => {
-  return (
-    <Image
-      src="/linear.webp"
-      alt="dummy image"
-      width="1000"
-      height="1000"
-      className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
-    />
-  );
-};

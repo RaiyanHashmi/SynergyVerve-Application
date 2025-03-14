@@ -2,21 +2,14 @@
 import Hero from "../components/hero";
 import AboutSec from "../components/AboutCompanySection";
 import { RevenueDrive } from "../components/RevenueDrive";
-import { Inter } from "next/font/google";
 import { HeroParallax } from "../components/ui/HeroParallax";
 import MarketingSection from "@/components/marketingSection";
 import { BoostTheMetrics as BTM } from "@/components/BoostTheMetricsSection";
-import { TabsDemo } from "@/components/tabsDemo";
+import { TabsDemo } from "../components/tabsDemo";
 import HeaderMegaMenu from "@/components/HeaderMegaMenu";
 import TransformSection from "@/components/TransformSection";
 import Footer from "@/components/Footer";
-import '@mantine/core/styles.css' assert { type: 'css' };
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  weight: ["400", "700"],
-});
+import transform from "../../public/transform.jpg";
 
 const products = [
   {
@@ -68,18 +61,25 @@ const products = [
 
 export default function Home() {
   return (
-    <div className={`${inter.variable} font-sans`}>
+    <>
       <HeaderMegaMenu />
       <Hero />
       <RevenueDrive />
       <AboutSec />
       <HeroParallax products={products} />
       <MarketingSection />
-      <TransformSection/>
+      <TransformSection 
+        image={transform}
+        imageAlt="Synergy Verve"
+        tagText="Transformation"
+        title="Transform Your Marketing into Revenue with Synergy Verve"
+        description1="The expert team of Synergy Verve, believes in the power of data to drive smarter, more profitable decisions. With our innovative tools and strategies, you'll get clear insights that help you make confident moves and grow your business."
+        description2="Our platform, Synergy Verve, connects the dots between your marketing activities and actual sales. By understanding which efforts bring in the revenue, you can confidently reinvest in what works and adjust the rest. With Synergy Verve, you'll always know exactly where to focus to drive growth."
+      />
       <BTM/>
       <TabsDemo/>
       <Footer/>
 
-    </div>
+    </>
   );
 }
