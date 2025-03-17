@@ -1,8 +1,7 @@
 "use client";
-
 import React from "react";
-import { HoverBorderGradient } from "./ui/HoverBorderGradient";
 import '@/styles/globals.css';
+import { ArrowRight } from "lucide-react";
 
 interface NavBarProps {
   text: string;
@@ -10,21 +9,13 @@ interface NavBarProps {
   className?: string;
 }
 
-export default function NavBar({ 
-  text = "Get Started", 
-  href = "/get-started",
-  className = ""
-}: NavBarProps) {
+export default function NavBar({ text }: NavBarProps) {
   return (
-    <a
-      href={href}
-      className={`px-4 py-2 bg-primary text-text rounded-lg font-medium text-lg col_text ${className}`}
-    >
-      <div className="flex justify-center text-center">
-        <HoverBorderGradient>
-          <span>{text}</span>
-        </HoverBorderGradient>
-      </div>
-    </a>
+    <button className="flex mt-4 items-center gap-2 bg-text text-white font-bold border-none rounded-full px-4 py-3 text-sm cursor-pointer uppercase">
+           {text}
+            <span className="flex justify-center items-center bg-accent text-white w-7 h-7 rounded-full">
+              <ArrowRight size={16} />
+            </span>
+          </button>
   );
 }

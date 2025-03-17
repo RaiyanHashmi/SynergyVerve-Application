@@ -72,7 +72,6 @@ const TransformSection: React.FC<TransformSectionProps> = ({
 
   return (
     <section className="flex flex-col md:flex-row items-center justify-between px-8 py-16 bg-secondary shadow-lg">
-      {/* Conditionally order the content based on imageOnLeft prop */}
       {imageOnLeft ? (
         <>
           {ImageSection}
