@@ -60,7 +60,7 @@ const data = [
           </h5>
 
           <p className="text-gray-700 dark:text-gray-300 text-lg font-normal mt-2">
-            Without consistent website traffic, you're missing out on potential
+            Without consistent website traffic, you&apos;re missing out on potential
             leads and sales. Our tailored SEO strategies can help improve your
             rankings, making it easier for people to find you and explore what
             you offer
@@ -396,6 +396,7 @@ export default function Home() {
       data={data} />
       <TabsDemo/>
       <FAQ title="FAQ's" faqs={faqData} />
+      
       <Footer/>
 
     </>

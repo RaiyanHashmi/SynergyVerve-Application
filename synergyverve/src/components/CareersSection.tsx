@@ -27,7 +27,7 @@ export function CareersSection() {
         {/* Right Column - 60% */}
         <div className="w-3/5">
           <p className="text-lg text-text mt-8 ps-4 dark:text-gray-300 max-w-3xl">
-          Synergy Verve is more than just a digital marketing agency. It's a place for growth, creativity, and passion. Our expert marketers, designers, developers, and data analysts work together to create some of the most innovative work on the web. If you're passionate about digital marketing and ready to impact, check out our open positions.
+          Synergy Verve is more than just a digital marketing agency. It&apos;s a place for growth, creativity, and passion. Our expert marketers, designers, developers, and data analysts work together to create some of the most innovative work on the web. If you&apos;re passionate about digital marketing and ready to impact, check out our open positions.
           </p>
         </div>
       </div>
