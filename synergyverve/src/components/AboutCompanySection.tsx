@@ -1,7 +1,6 @@
 import React from "react";
 import  Telescope  from "../../assets/img/Telescope.png"; 
 import  Rocket  from "../../assets/img/rocket.png";
-import dynamic from "next/dynamic";
 
 
 
