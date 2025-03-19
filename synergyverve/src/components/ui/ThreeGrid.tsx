@@ -3,10 +3,9 @@ interface ThreeGridProps {
   title: string;
   description?: string;
   Grid: { Head: string; Desc: string }[];
-  buttonText: string;
 }
 
-export default function ThreeGrid({ title, description, Grid, buttonText }: ThreeGridProps) {
+export default function ThreeGrid({ title, description, Grid }: ThreeGridProps) {
     return (
       <section className="py-12 px-6 bg-gray-100">
         <div className="max-w-5xl mx-auto text-center">

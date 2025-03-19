@@ -30,7 +30,7 @@ import {Network,
   Layers,
   CheckCircle,
   Search,
-  ArrowRight,
+
   Database,
   Settings,
   UploadCloud,
@@ -1070,7 +1070,7 @@ const DataPipelineDevelopment: React.FC = () => {
             delivery, helping your business unlock the full value of its data.
             Our Data Pipeline Development Services connect your tools and
             platforms, ensuring smooth data movement so you can make smarter,
-            faster decisions. Ready to streamline your data flow? Let's build a
+            faster decisions. Ready to streamline your data flow? Let&apos;s build a
             pipeline that works for you.
           </div>
           <EmailBar />
@@ -1105,7 +1105,7 @@ const DataPipelineDevelopment: React.FC = () => {
       <ThreeGrid
         title="Why Choose Synergy Verve for Data Pipeline Development?"
         Grid={GridData}
-        buttonText="Request Price"
+      
       />
       <FAQ title="Event FAQs" faqs={faqData} />
       <Footer />

@@ -31,7 +31,6 @@ import {
   Layers,
   CheckCircle,
   Search,
-  ArrowRight,
   Database,
   Settings,
   UploadCloud,
@@ -1099,7 +1098,7 @@ const Seo: React.FC = () => {
        <ThreeGrid
         title="Customized SEO Plans"
         Grid={GridData}
-        buttonText="Request Price"
+        
       />
 
       {serviceSections.map((service, index) => (

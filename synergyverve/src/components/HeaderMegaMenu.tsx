@@ -174,7 +174,7 @@ const MegaMenu = () => {
         {/* Desktop Navigation */}
         <div className="hidden lg:flex h-full ">
           <a
-            href="/"
+            href="#"
             className="hover:text-accent h-full px-6 no-underline text-xl font-bold flex items-center hover:bg-gray-100/10"
           >
             HOME

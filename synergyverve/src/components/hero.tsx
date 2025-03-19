@@ -2,7 +2,6 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import HeroImage from "../../assets/img/Mask group.png";
-import HeroBG from "../../assets/img/Group 2.png";
 import EmailBar from "./emailBar";
 import '@/styles/globals.css';
 import { BackgroundBeams } from "../components/ui/background-beams";

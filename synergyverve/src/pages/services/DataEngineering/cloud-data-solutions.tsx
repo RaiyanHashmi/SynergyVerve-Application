@@ -31,7 +31,6 @@ import {
   Layers,
   CheckCircle,
   Search,
-  ArrowRight,
   Database,
   Settings,
   UploadCloud,
@@ -52,7 +51,7 @@ const CloudDataSolutions: React.FC = () => {
 
           <p className="text-gray-700 dark:text-gray-300 text-lg font-normal mt-2">
             Seamlessly transfer your data across systems with our end-to-end
-            data migration services. Synergy Verve's data migration strategy
+            data migration services. Synergy Verve&apos;s data migration strategy
             provides secure, efficient, and accurate data migration, ensuring
             minimal downtime and zero data loss. Our experts manage the entire
             ETL (Extract, Transform, Load) process, allowing you to move data
@@ -1133,7 +1132,7 @@ const CloudDataSolutions: React.FC = () => {
       <ThreeGrid
         title="Why Choose Synergy Verve for Data Pipeline Development?"
         Grid={GridData}
-        buttonText="Request Price"
+        
       />
       <FAQ title="Event FAQs" faqs={faqData} />
       <Footer />
