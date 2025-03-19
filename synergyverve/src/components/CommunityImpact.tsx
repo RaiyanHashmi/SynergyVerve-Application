@@ -27,7 +27,7 @@ export function CommunityImpact() {
         {/* Right Column - 60% */}
         <div className="w-3/5">
           <p className="text-lg text-text mt-8 ps-4 dark:text-gray-300 max-w-3xl">
-          Through our "Synergy Verve" platform, we're dedicated to giving back. From building schools in underserved communities to supporting clean water initiatives, we aim to improve lives worldwide. By 2025, we plan to impact the lives of 5,000 people across the globe positively.
+          Through our &quot;Synergy Verve&quot; platform, we&apos;re dedicated to giving back. From building schools in underserved communities to supporting clean water initiatives, we aim to improve lives worldwide. By 2025, we plan to impact the lives of 5,000 people across the globe positively.
           </p>
         </div>
       </div>
