@@ -15,8 +15,15 @@ export default {
     extend: {
         animation: {
           "meteor-effect": "meteor 5s linear infinite",
+          aurora: 'aurora 60s linear infinite',
+
         },
         keyframes: {
+          aurora: {
+            '0%': { backgroundPosition: '50% 50%, 50% 50%' },
+            '50%': { backgroundPosition: '0% 100%, 100% 0%' },
+            '100%': { backgroundPosition: '50% 50%, 50% 50%' },
+          },
           meteor: {
             "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
             "70%": { opacity: "1" },

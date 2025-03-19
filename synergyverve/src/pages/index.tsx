@@ -10,6 +10,7 @@ import HeaderMegaMenu from "@/components/HeaderMegaMenu";
 import TransformSection from "@/components/TransformSection";
 import Footer from "@/components/Footer";
 import transform from "../../public/transform.jpg";
+import FAQ from "@/components/Faq";
 
 // boost the metrics section 
 import { Timeline } from "@/components/ui/timeline";
@@ -31,6 +32,20 @@ import {
   ArrowRightCircle,
   MonitorSmartphone,
 } from "lucide-react";
+const faqData = [
+  {
+    question: "Are there parking spaces nearby?",
+    answer: "Yes, there are several parking spots around the venue.",
+  },
+  {
+    question: "Can I bring guests to this part of the evening?",
+    answer: "Yes, guests are allowed but require prior registration.",
+  },
+  {
+    question: "How do I access the event app?",
+    answer: "You can download the event app from the official website.",
+  },
+];
 const data = [
     {
       title: "Traffic",
@@ -380,6 +395,7 @@ export default function Home() {
       <Timeline heading="Boost the Metrics That Matter Most to Your Business"
       data={data} />
       <TabsDemo/>
+      <FAQ title="FAQ's" faqs={faqData} />
       <Footer/>
 
     </>

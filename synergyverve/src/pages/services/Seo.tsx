@@ -7,12 +7,13 @@ import Header from "@/components/HeaderMegaMenu";
 import EmailBar from "@/components/emailBar";
 import Footer from "@/components/Footer";
 import TransformSection from "@/components/TransformSection";
-import Datapipeline from "../../../../public/servicesImg/dataPipeline.jpg";
+import Datapipeline from "../../../public/servicesImg/dataPipeline.jpg";
 import ServiceSection from "@/components/ServiceSection";
 import { Timeline } from "@/components/ui/timeline";
 import ThreeGrid from "@/components/ui/ThreeGrid";
 import Button from "@/components/button";
-import {Network,
+import {
+  Network,
   Warehouse,
   Cloud,
   Scale,
@@ -35,7 +36,7 @@ import {Network,
   Settings,
   UploadCloud,
 } from "lucide-react";
-const DataPipelineDevelopment: React.FC = () => {
+const Seo: React.FC = () => {
   const data = [
     {
       title: "Data Migration Services",
@@ -536,7 +537,7 @@ const DataPipelineDevelopment: React.FC = () => {
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100 dark:border-gray-700">
               <div className="flex items-start gap-4">
                 <div className="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
-                  <BarChart  className="w-8 h-8 text-accent" />
+                  <BarChart className="w-8 h-8 text-accent" />
                 </div>
                 <div>
                   <h3 className="font-bold text-xl text-gray-900 dark:text-white mb-2">
@@ -733,7 +734,9 @@ const DataPipelineDevelopment: React.FC = () => {
             <li className="flex items-center gap-3">
               <Settings className="w-20 h-20 text-accent" />
               <div className="">
-                <p className="font-bold text-2xl">Validation Rules & Automation</p>
+                <p className="font-bold text-2xl">
+                  Validation Rules & Automation
+                </p>
                 <p className="">
                   Implement robust, automated validation checks to uphold data
                   quality, covering accuracy, consistency, completeness, and
@@ -744,7 +747,9 @@ const DataPipelineDevelopment: React.FC = () => {
             <li className="flex items-center gap-3">
               <AlertCircle className="w-20 h-20 text-accent" />
               <div className="">
-                <p className="font-bold text-2xl">Error Detection & Resolution</p>
+                <p className="font-bold text-2xl">
+                  Error Detection & Resolution
+                </p>
                 <p className="">
                   Use intelligent algorithms to pinpoint and correct data
                   errors, enhancing overall data integrity.
@@ -754,7 +759,9 @@ const DataPipelineDevelopment: React.FC = () => {
             <li className="flex items-center gap-3">
               <Database className="w-20 h-20 text-accent" />
               <div className="">
-                <p className="font-bold text-2xl">Standardization & Enrichment</p>
+                <p className="font-bold text-2xl">
+                  Standardization & Enrichment
+                </p>
                 <p className="">
                   Normalize data formats and enrich records for more
                   comprehensive and actionable insights.
@@ -776,7 +783,8 @@ const DataPipelineDevelopment: React.FC = () => {
                     Improved Data Accuracy
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Eliminate errors and inconsistencies for trustworthy insights
+                    Eliminate errors and inconsistencies for trustworthy
+                    insights
                   </p>
                 </div>
               </div>
@@ -806,7 +814,8 @@ const DataPipelineDevelopment: React.FC = () => {
                     Regulatory Compliance
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Ensure adherence to industry standards like GDPR, HIPAA, and CCPA.
+                    Ensure adherence to industry standards like GDPR, HIPAA, and
+                    CCPA.
                   </p>
                 </div>
               </div>
@@ -821,7 +830,8 @@ const DataPipelineDevelopment: React.FC = () => {
                     Optimized Business Intelligence
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Reliable data for more accurate reporting, forecasting, and analytics.
+                    Reliable data for more accurate reporting, forecasting, and
+                    analytics.
                   </p>
                 </div>
               </div>
@@ -829,7 +839,6 @@ const DataPipelineDevelopment: React.FC = () => {
           </div>
         </div>
       ),
-
     },
     {
       title: "Monitoring, Tracking & Alerting",
@@ -1061,17 +1070,15 @@ const DataPipelineDevelopment: React.FC = () => {
           className="relative flex flex-col gap-4 items-center justify-center px-4"
         >
           <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
-            Data Pipeline Development
+            Search Engine Optimization
           </div>
           <div className="text-center font-semibold text-base max-w-5xl md:text-lg dark:text-neutral-200 py-4">
-            Your data holds immense potential, but it becomes even more powerful
-            when it flows seamlessly across systems. Our company Synergy Verve
-            builds automated workflows for data ingestion, transformation, and
-            delivery, helping your business unlock the full value of its data.
-            Our Data Pipeline Development Services connect your tools and
-            platforms, ensuring smooth data movement so you can make smarter,
-            faster decisions. Ready to streamline your data flow? Let's build a
-            pipeline that works for you.
+            Powering Revenue Growth for Brands Globally SEO Strategies That
+            Drive Traffic & Boost Revenue Increase your online visibility and
+            turn clicks into conversions with data-driven SEO strategies. Our
+            expert-led, technology-backed approach ensures your brand ranks
+            higher, attracts quality leads, and maximizes ROI. Let’s create an
+            SEO plan that works for your business.
           </div>
           <EmailBar />
         </motion.div>
@@ -1079,12 +1086,20 @@ const DataPipelineDevelopment: React.FC = () => {
 
       <TransformSection
         image={Datapipeline}
-        imageAlt="Data Pipeline"
-        tagText="Data Pipeline"
-        title="What We Offer in Data Pipeline Development"
-        description1="Our Data Pipeline Development Services are designed to simplify and optimize your data workflows, helping your business make more intelligent decisions with cleaner, more accessible data. We build robust, scalable data pipelines that facilitate data integration, enhance real-time analytics, and streamline business operations. Here's how our data pipeline solutions can empower your business:"
-        description2="●	Data Integration ●	Real-Time Data Processing ● Custom Data Pipelines"
+        imageAlt="SearchEngineOptimization"
+        tagText="SearchEngineOptimization"
+        title="SEO Services Prices Built for Measurable Growth"
+        description1="We believe SEO isn’t just about rankings.
+         It’s about delivering real business impact.
+         Our strategies are designed around your industry, 
+         goals, and competitive landscape to ensure long-term success."
+        
         imageOnLeft={true}
+      />
+       <ThreeGrid
+        title="Customized SEO Plans"
+        Grid={GridData}
+        buttonText="Request Price"
       />
 
       {serviceSections.map((service, index) => (
@@ -1102,15 +1117,11 @@ const DataPipelineDevelopment: React.FC = () => {
         desc="Discover how our team of Data Engineering specialists can transform your raw data into actionable insights with our end-to-end solutions"
         data={data}
       />
-      <ThreeGrid
-        title="Why Choose Synergy Verve for Data Pipeline Development?"
-        Grid={GridData}
-        buttonText="Request Price"
-      />
+     
       <FAQ title="Event FAQs" faqs={faqData} />
       <Footer />
     </>
   );
 };
 
-export default DataPipelineDevelopment;
+export default Seo;

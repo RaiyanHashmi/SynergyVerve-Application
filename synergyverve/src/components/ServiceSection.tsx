@@ -36,6 +36,7 @@ interface ServiceSectionProps {
   teamMembers?: TeamMember[];
   backgroundColor?: string;
   imageOnLeft?: boolean;
+  gridservice?: string;
 }
 
 const ImageSection: React.FC<{ illustration?: React.ReactNode }> = ({

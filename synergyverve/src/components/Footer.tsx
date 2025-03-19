@@ -14,14 +14,15 @@ import {
 import EmailBar from "./emailBar";
 
 const Footer = () => {
-  // Using the same services structure as in your header
+  
+
   const services = [
     {
       category: "Data Engineering",
       subcategories: [
         {
           name: "Data Pipeline Development",
-          link: "/services/data-pipeline-development",
+          link: "/services/DataEngineering/data-pipeline-development",
         },
         {
           name: "Cloud Data Solutions",
@@ -96,6 +97,18 @@ const Footer = () => {
       ],
     },
     {
+      category: "SEO",
+      subcategories: [
+        { name: "Digital Strategy", link: "/services/Seo/DigitalStrategy" },
+        {
+          name: "Social Media Management",
+          link: "/services/Seo/SocialMediaManagement",
+        },
+        { name: "Branding", link: "/services/Seo/Branding" },
+        { name: "Content Production", link: "/services/Seo/ContentProduction" },
+      ],
+    },
+    {
       category: "IoT development",
       subcategories: [
         { name: "IoT Data Processing", link: "/services/IoTDataProcessing" },
@@ -133,6 +146,7 @@ const Footer = () => {
         },
       ],
     },
+   
   ];
 
   return (

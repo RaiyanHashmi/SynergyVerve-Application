@@ -1,9 +1,5 @@
 "use client";
-import {
-  useScroll,
-  useTransform,
-  motion,
-} from "framer-motion";
+import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
@@ -13,30 +9,30 @@ interface TimelineEntry {
 
 interface TimelineProps {
   data: TimelineEntry[];
-  heading: string; 
-  desc ?: string; 
+  heading: string;
+  desc?: string;
 }
 
-export const Timeline = ({ data, heading ,desc }: TimelineProps) => {
+export const Timeline = ({ data, heading, desc }: TimelineProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
-  
+
   useEffect(() => {
     if (ref.current) {
       const rect = ref.current.getBoundingClientRect();
       setHeight(rect.height);
     }
   }, [ref]);
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start 10%", "end 50%"],
   });
-  
+
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
-  
+
   return (
     <div
       className="w-full bg-white dark:bg-neutral-950  md:px-10"
@@ -48,7 +44,7 @@ export const Timeline = ({ data, heading ,desc }: TimelineProps) => {
         </h2>
         <p className="text-xl max-w-4xl">{desc}</p>
       </div>
-      
+
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
           <div
@@ -63,7 +59,7 @@ export const Timeline = ({ data, heading ,desc }: TimelineProps) => {
                 {item.title}
               </h3>
             </div>
-            
+
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
               <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
                 {item.title}
