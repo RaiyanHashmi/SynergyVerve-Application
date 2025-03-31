@@ -2,6 +2,7 @@ import Image from "next/image";
 import logo from "../../assets/img/white-synergy3.png";
 import React, { useState, useRef, useEffect } from "react";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
+import Button from "./button";
 
 
 const services = [
@@ -217,15 +218,7 @@ const MegaMenu = () => {
 
         {/* Contact Button */}
         <div className="hidden lg:block">
-          <button
-            className="flex items-center gap-2 bg-text text-white font-bold border-none rounded-full px-4 py-3 text-sm cursor-pointer uppercase"
-            onClick={() => setMegaMenuOpen(false)}
-          >
-            CONTACT US NOW
-            <span className="flex justify-center items-center bg-accent text-white w-7 h-7 rounded-full">
-              <ArrowRight size={16} />
-            </span>
-          </button>
+        <Button text="Contact Us Now"/>
         </div>
 
         {/* Mobile Menu Button */}
@@ -336,12 +329,7 @@ const MegaMenu = () => {
             </a>
 
             <div className="mt-6 px-4 py-4">
-              <button className="flex items-center justify-center gap-2 bg-text text-white font-bold border-none rounded-full px-6 py-3 text-sm cursor-pointer uppercase w-full">
-                CONTACT US NOW
-                <span className="flex justify-center items-center bg-accent text-black w-7 h-7 rounded-full">
-                  <ArrowRight size={16} />
-                </span>
-              </button>
+             <Button text="Contact Us Now"/>
             </div>
           </div>
         </div>
