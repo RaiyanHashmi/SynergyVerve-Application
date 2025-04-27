@@ -1,7 +1,7 @@
 import Image from "next/image";
 import logo from "../../assets/img/white-synergy3.png";
 import React, { useState, useRef, useEffect } from "react";
-import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import Button from "./button";
 
 
