@@ -36,7 +36,7 @@ const FAQ = ({ title, faqs }: FAQProps) => {
           {faqs.map((faq, index) => (
             <div key={index} className="mb-2">
               <button
-                className="w-full text-left p-4 bg-white rounded-lg shadow flex justify-between items-center"
+                className="w-full text-left p-4 bg-secondary rounded-lg shadow flex justify-between items-center"
                 onClick={() => toggleFAQ(index)}
               >
                 <span className="font-medium">{faq.question}</span>

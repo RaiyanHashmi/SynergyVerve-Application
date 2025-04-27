@@ -13,7 +13,7 @@ export default function NavBar({ text }: NavBarProps) {
 
   return (
     <button
-      className="flex mt-4 items-center gap-2 bg-text text-white font-bold border-none rounded-full px-4 py-3 text-sm cursor-pointer uppercase transition-all duration-300 ease-in-out hover:bg-accent"
+      className="flex my-4 items-center gap-2 bg-text text-white font-bold border-none rounded-full px-4 py-3 text-sm cursor-pointer uppercase transition-all duration-300 ease-in-out hover:bg-accent"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
