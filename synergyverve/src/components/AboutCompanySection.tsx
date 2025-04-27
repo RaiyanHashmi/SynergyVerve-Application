@@ -47,7 +47,7 @@ const AboutCompanySect = () => {
             </div>
           </div>
     
-          
+          {/* Bottom Right Icon */}
           <div className="absolute bottom-5 right-5">
             <span className="w-10 h-10 bg-purple-500 rounded-full shadow-md"></span>
           </div>
