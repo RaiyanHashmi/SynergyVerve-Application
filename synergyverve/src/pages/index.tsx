@@ -10,14 +10,13 @@ import TransformSection from "@/components/TransformSection";
 import Footer from "@/components/Footer";
 import transform from "../../public/transform.jpg";
 import FAQ from "@/components/Faq";
-import React, { useEffect, useState } from "react";
 import { InfiniteMovingCards } from "../../src/components/ui/infinite-moving-cards";
 import { Timeline } from "@/components/ui/timeline";
 import CPL from "../../public/cplimg.webp";
 import Data from "../../public/data.webp";
 import Revenue from "../../public/revenue.webp";
 import CenteredText from "@/components/ui/centeredText";
-// Removed duplicate import and corrected the named import
+
 import {
   Search,
   Megaphone,
