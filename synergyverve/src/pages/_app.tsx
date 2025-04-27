@@ -9,9 +9,9 @@ import "@/styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    // <div className={`${inter} font-inter`}>
-    //   <Component {...pageProps} />
-    // </div>
+    <div>
+      <Component {...pageProps} />
+    </div>
   );
 }
 
