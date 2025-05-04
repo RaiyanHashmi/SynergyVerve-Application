@@ -48,8 +48,10 @@ export function RevenueDrive() {
 
   return (
     <>
-      <h2 className="text-center text-xl md:text-4xl text-black dark:text-white md:text-6xl mt-7 font-bold">
-        How We Drive Revenue
+      <h2 className="text-center text-xl md:text-5xl text-black dark:text-white md:text-6xl mt-20 font-bold">
+        How We Drive <span className="from-primary to-accent bg-clip-text text-transparent bg-gradient-to-r ">
+        Revenue
+              </span>
       </h2>
       <p className="text-center md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-4xl mt-2 mx-auto">
         Looking to grow your business? Our personalized marketing strategies are

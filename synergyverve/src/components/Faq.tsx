@@ -1,8 +1,6 @@
-import Image from "next/image";
-import Question from "../../public/question.png";
+
 import { useState } from "react";
-import { ArrowDownToDot,
-  ArrowDownRight
+import { Plus
  } from "lucide-react";
 interface FAQProps {
   title: string;
@@ -17,40 +15,93 @@ const FAQ = ({ title, faqs }: FAQProps) => {
   };
 
   return (
-    <div className="flex relative my-20 mx-20">
-      <div className="w-1/3">
-      <h2 className="text-6xl  text-center  font-bold mt-10">{title}</h2>
-      <div className="mt-6">
-            <Image
-              src={Question}
-              alt="SEO optimization"
-              width={300}
-              height={600}
-              className="  absolute top-16 left-10 -z-10"
-            />
+    <div className="bg-text p-8 rounded-2xl text-white relative m-20 overflow-hidden shadow-xl">
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-8 transition-all duration-700 ease-in-out hover:translate-y-1">
+          <div className="text-white text-lg font-semibold mb-1 animate-fade-in">
+            FAQs
           </div>
+          <h2 className="text-6xl font-bold tracking-tighter leading-none">
+            HAVE
+            <br />
+            <span className="from-primary to-accent bg-clip-text text-transparent bg-gradient-to-r">
+              QUESTIONS?
+            </span>
+          </h2>
+        </div>
 
-      </div>
-      <div className="w-2/3 my-10">
-        <div className=" mx-auto p-6 bg-gray-100 rounded-xl shadow-lg">
+        <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="mb-2">
+            <div
+              key={index}
+              className="border-b border-primary transition-all duration-300 ease-in-out hover:border-accent"
+            >
               <button
-                className="w-full text-left p-4 bg-secondary rounded-lg shadow flex justify-between items-center"
+                className="w-full text-left py-4 pr-4 flex justify-between items-center transition-all duration-300 hover:bg-primary/10 rounded-t-md group"
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="font-medium">{faq.question}</span>
-                <span>{openIndex === index ? <ArrowDownToDot 
- className="w-8 h-8 text-accent" /> : <ArrowDownRight  
- className="w-8 h-8 text-accent" />}</span>
+                <span className="text-white text-lg group-hover:text-primary transition-colors duration-300">
+                  {faq.question}
+                </span>
+                <div
+                  className={`flex items-center justify-center w-6 h-6 rounded-md transition-all duration-300 transform ${
+                    openIndex === index
+                      ? "bg-accent rotate-180 text-white"
+                      : "border border-primary hover:bg-primary/20 text-primary"
+                  }`}
+                >
+                  {openIndex === index ? (
+                    <span className="font-bold transition-transform duration-300">
+                      −
+                    </span>
+                  ) : (
+                    <Plus
+                      size={12}
+                      className="transition-transform duration-300 group-hover:scale-110"
+                    />
+                  )}
+                </div>
               </button>
-              {openIndex === index && (
-                <div className="p-4 bg-gray-200 rounded-lg mt-1">
+
+              <div
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                  openIndex === index
+                    ? "max-h-96 opacity-100"
+                    : "max-h-0 opacity-0"
+                }`}
+              >
+                <div className="pb-4 text-white text-lg  opacity-80">
                   {faq.answer}
                 </div>
-              )}
+              </div>
             </div>
           ))}
+        </div>
+
+        <div className="flex justify-between items-center mt-8">
+          <div className="text-sm text-text opacity-70 hover:opacity-100 transition-all duration-300">
+            Can't find what you're looking for?
+          </div>
+          <a
+            href="#"
+            className="flex items-center text-sm text-primary hover:text-accent group transition-all duration-300 ease-in-out"
+          >
+            See All FAQs
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="ml-1 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+            >
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
         </div>
       </div>
     </div>

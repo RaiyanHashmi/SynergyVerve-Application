@@ -3,12 +3,12 @@ import Button from "../button";
 
 const centeredText: React.FC = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center text-center min-h-screen bg-white overflow-hidden p-6">
+    <section className="relative flex flex-col items-center justify-center text-center py-10 min-h-screen bg-white overflow-hidden p-6">
       {/* Floating Images */}
       <img
         src="/4.jpg"
         alt="Coffee"
-        className="absolute top-10 left-1/2 transform -translate-x-1/2 w-28 h-28 object-cover rotate-6 animate-float"
+        className="absolute top-10 left-0 transform -translate-x-1/2 w-28 h-28 object-cover rotate-6 animate-float"
       />
       <img
         src="/3.jpg"

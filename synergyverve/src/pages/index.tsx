@@ -10,13 +10,14 @@ import TransformSection from "@/components/TransformSection";
 import Footer from "@/components/Footer";
 import transform from "../../public/transform.jpg";
 import FAQ from "@/components/Faq";
+
 import { InfiniteMovingCards } from "../../src/components/ui/infinite-moving-cards";
 import { Timeline } from "@/components/ui/timeline";
 import CPL from "../../public/cplimg.webp";
 import Data from "../../public/data.webp";
 import Revenue from "../../public/revenue.webp";
 import CenteredText from "@/components/ui/centeredText";
-
+// Removed duplicate import and corrected the named import
 import {
   Search,
   Megaphone,
@@ -46,34 +47,44 @@ const faqData = [
     question: "How do I access the event app?",
     answer: "You can download the event app from the official website.",
   },
+  {
+    question: "Are there parking spaces nearby?",
+    answer: "Yes, there are several parking spots around the venue.",
+  },
+  {
+    question: "Can I bring guests to this part of the evening?",
+    answer: "Yes, guests are allowed but require prior registration.",
+  },
+  {
+    question: "How do I access the event app?",
+    answer: "You can download the event app from the official website.",
+  },
+  {
+    question: "Are there parking spaces nearby?",
+    answer: "Yes, there are several parking spots around the venue.",
+  },
+  {
+    question: "Can I bring guests to this part of the evening?",
+    answer: "Yes, guests are allowed but require prior registration.",
+  },
+  {
+    question: "How do I access the event app?",
+    answer: "You can download the event app from the official website.",
+  },
+  {
+    question: "Are there parking spaces nearby?",
+    answer: "Yes, there are several parking spots around the venue.",
+  },
+  {
+    question: "Can I bring guests to this part of the evening?",
+    answer: "Yes, guests are allowed but require prior registration.",
+  },
+  {
+    question: "How do I access the event app?",
+    answer: "You can download the event app from the official website.",
+  },
 ];
-const servicesData = [
-  {
-    id: 1,
-    title: "Brand Strategy",
-    description:
-      "Develop a unique brand voice and visual identity that resonates with your audience and sets you apart from competitors.",
-  },
-  {
-    id: 2,
-    title: "Social Media Marketing",
-    description:
-      "Create impactful campaigns to grow your presence, build connections, and drive conversions across social platforms.",
-  },
 
-  {
-    id: 3,
-    title: "SEO & Content Marketing",
-    description:
-      "Boost your visibility with optimized content and strategies that attract, engage, and convert your target audience.",
-  },
-  {
-    id: 4,
-    title: "Email Marketing",
-    description:
-      "Design personalized email campaigns that nurture leads, build loyalty, and drive consistent engagement.",
-  },
-];
 const data = [
   {
     title: "Traffic",
@@ -398,7 +409,7 @@ const products = [
     thumbnail: "/two.jpg",
   },
 ];
-// const testimonials = [
+
 //   {
 
 //     quote:
@@ -477,7 +488,7 @@ export default function Home() {
       <AboutSec />
       <HeroParallax products={products} />
 
-      <MarketingServices services={servicesData} />
+      <MarketingServices />
       <TransformSection
         image={transform}
         imageAlt="Synergy Verve"

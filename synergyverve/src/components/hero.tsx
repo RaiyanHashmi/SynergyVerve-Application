@@ -22,14 +22,14 @@ const Hero: React.FC = () => {
 
       <section className="relative bg-cover bg-no-repeat bg-center min-h-screen flex items-center justify-center px-8">
         
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-5 md:space-y-0 md:space-x-8">
-          <div className="max-w-2xl text-left">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-8">
+          <div className="max-w-2xl text-left ">
             <h2 className="text-xl font-semibold ">
               Digital Marketing That Fuels Growth
             </h2>
             <h1 className=" md:text-7xl  mt-2  font-bold">
               Accelerate Your Revenue with{" "}
-              <span className="from-primary to-accent bg-clip-text text-transparent bg-gradient-to-r col_text">
+              <span className="from-primary to-accent bg-clip-text text-transparent bg-gradient-to-r ">
                 Synergy Verve
               </span>
             </h1>
@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
               alt="Synergy Verve Team"
               width={700}
               height={700}
-              className="drop-shadow-xl"
+              className=""
             />
           </div>
         </div>
