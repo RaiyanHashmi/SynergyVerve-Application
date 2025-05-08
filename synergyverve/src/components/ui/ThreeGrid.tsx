@@ -1,4 +1,5 @@
 import Button from "@/components/button";
+import {Meteors} from "@/components/ui/meteors";
 interface ThreeGridProps {
   title: string;
   description?: string;
@@ -22,15 +23,17 @@ export default function ThreeGrid({ title, description, Grid }: ThreeGridProps) 
           {Grid.map((Grid, index) => (
             <div
               key={index}
-              className="relative p-6 bg-transparent  shadow-md rounded-lg shadow-lg bg-white/10 backdrop-blur-md border border-white/30"
+              className="relative p-6 bg-text border border-gray-800 px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-center items-center"
             >
+              <Meteors number={20} />
               <h3 className="text-6xl font-bold from-primary to-accent bg-clip-text text-transparent bg-gradient-to-r">
           {index + 1 < 10 ? `0${index + 1}.` : `${index + 1}.`}
               </h3>
-              <h3 className="text-4xl font-bold text-gray-900">{Grid.Head}</h3>
-              <p className="mt-2 text-xl text-gray-700">{Grid.Desc}</p>
+              <h3 className="text-4xl font-bold text-white text-center">{Grid.Head}</h3>
+              <p className="mt-2 text-xl text-gray-400 text-center">{Grid.Desc}</p>
             </div>
           ))}
+          
         </div>
   
         {/* Call to Action Button */}
