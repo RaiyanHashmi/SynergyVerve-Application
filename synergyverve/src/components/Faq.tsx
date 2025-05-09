@@ -7,7 +7,7 @@ interface FAQProps {
   faqs: { question: string; answer: string }[];
 }
 
-const FAQ = ({ title, faqs }: FAQProps) => {
+const FAQ = ({  faqs }: FAQProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
@@ -80,7 +80,7 @@ const FAQ = ({ title, faqs }: FAQProps) => {
 
         <div className="flex justify-between items-center mt-8">
           <div className="text-sm text-text opacity-70 hover:opacity-100 transition-all duration-300">
-            Can't find what you're looking for?
+            Ca&apos;t find what you&apos;re looking for?
           </div>
           <a
             href="#"

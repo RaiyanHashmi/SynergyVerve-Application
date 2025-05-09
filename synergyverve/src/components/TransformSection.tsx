@@ -43,7 +43,7 @@ const TransformSection: React.FC<TransformSectionProps> = ({
 
   const ContentSection = (
     <div className="md:w-2/3 p-6">
-      <span className="bg-primary text-white text-md px-3 py-3 rounded-full">
+      <span className="bg-accent text-white text-md px-3 py-3 rounded-full">
         {tagText}
       </span>
       <h2 className="text-6xl font-bold text-text mt-5">
